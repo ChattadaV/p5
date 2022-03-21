@@ -27,7 +27,7 @@ public class LockerItem extends Locker {
   public LockerItem(String name, String notes) {
 
     ArrayList<Fields> fields = new ArrayList<>();
-    fields.add(new Fields("uid", "name", "type"));
+    fields.add(new Fields("uid", "name"));
 
     // build uid as textfield
     // add to fields

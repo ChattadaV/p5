@@ -7,9 +7,9 @@
 
 package edu.uab.chattada.p5;
 
-public class TextField extends Fields {
+public class PasswordField extends Fields {
 
-  public TextField(String name, String value) {
+  public PasswordField(String name, String value) {
     super(name, value);
   }
 }

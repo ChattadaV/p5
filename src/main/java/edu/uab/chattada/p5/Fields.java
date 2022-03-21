@@ -16,19 +16,19 @@ public class Fields extends LockerItem {
 
   boolean isNotSearchAble;
 
-  public Fields(String name, String value, String type) {
+  public Fields(String name, String value) {
     this.name = name;
     this.value = value;
-    this.type = type;
+    //    this.type = type;
   }
 
   public String getName() {
     return name;
   }
 
-  public String getType() {
-    return type;
-  }
+  //  public String getType() {
+  //    return type;
+  //  }
 
   public String get() {
     return value;
