@@ -7,31 +7,37 @@
 
 package edu.uab.chattada.p5;
 
-import java.time.LocalDate;
+// import java.time.LocalDate;
 
-public class DateField extends Fields {
+public final class DateField extends Fields {
+
+  //  private int year;
+  //  private int month;
+  //  private int day;
 
   private String date;
-  private String dateIssue;
-  private String dateExpire;
 
-  public DateField(
-      String name,
-      String value,
-      int year_issue,
-      int month_issue,
-      int day_issue,
-      int year_expire,
-      int month_expire,
-      int day_expire) {
+  //  public DateField(String name, String value, int year, int month, int day) {
+  //    super(name, value);
+  //
+  //    //    this.year = year;
+  //    //    this.month = month;
+  //    //    this.day = day;
+  //
+  //    getDate(year, month, day);
+  //  }
+  //
+  //  public String getDate(int year, int month, int day) {
+  //    String date = LocalDate.of(year, month, day).toString();
+  //    return date;
+  //  }
+
+  public DateField(String name, String value) {
     super(name, value);
 
-    dateIssue = getDate(year_issue, month_issue, day_issue);
-    dateExpire = getDate(year_expire, month_expire, day_expire);
-  }
+    //    this.year = year;
+    //    this.month = month;
+    //    this.day = day;
 
-  public String getDate(int year, int month, int day) {
-    date = LocalDate.of(year, month, day).toString();
-    return date;
   }
 }

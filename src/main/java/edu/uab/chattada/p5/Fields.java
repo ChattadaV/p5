@@ -8,7 +8,7 @@
 package edu.uab.chattada.p5;
 
 /** */
-public class Fields extends LockerItem {
+public class Fields {
 
   private String name;
   private String value;
@@ -24,6 +24,10 @@ public class Fields extends LockerItem {
 
   public String getName() {
     return name;
+  }
+
+  public String getValue() {
+    return value;
   }
 
   //  public String getType() {
