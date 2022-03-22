@@ -12,7 +12,7 @@ import java.lang.String;
 import edu.uab.chattada.p5.Fields;
 
 /** */
-public class LockerItem {
+public abstract class LockerItem {
 
   private String uid;
   protected String name;

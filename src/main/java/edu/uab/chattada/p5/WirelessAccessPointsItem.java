@@ -13,7 +13,7 @@ import edu.uab.chattada.p5.Fields;
 
 public class WirelessAccessPointsItem extends LockerItem {
 
-  private String description;
+  private String name;
   private String networkType;
   private String ssid;
   private String password;
@@ -31,12 +31,12 @@ public class WirelessAccessPointsItem extends LockerItem {
     this.password = password;
     this.hidden = hidden;
 
-    WAPI_ArrayList.add(new NoteField("Notes: ", notes));
-    WAPI_ArrayList.add(new TextField("Name: ", name));
-    WAPI_ArrayList.add(new TextField("SSID: ", ssid));
-    WAPI_ArrayList.add(new TextField("Network Type: ", networkType));
-    WAPI_ArrayList.add(new TextField("Password: ", password));
-    WAPI_ArrayList.add(new TextField("Hidden: ", hidden));
+    WAPI_ArrayList.add(new NoteField("Notes: ", getNotes()));
+    WAPI_ArrayList.add(new TextField("Name: ", getName()));
+    WAPI_ArrayList.add(new TextField("SSID: ", getSsid()));
+    WAPI_ArrayList.add(new TextField("Network Type: ", getNetworkType()));
+    WAPI_ArrayList.add(new TextField("Password: ", getPassword()));
+    WAPI_ArrayList.add(new TextField("Hidden: ", getHidden()));
   }
 
   @Override
@@ -65,39 +65,102 @@ public class WirelessAccessPointsItem extends LockerItem {
     return output;
   }
 
-  //  public boolean isValid() {
-  //
-  //    boolean networkTypeOk =
-  //        networkType.equals("WEP")
-  //            || networkType.equals("WPA/WPA2")
-  //            || networkType.equals("no encryption");
-  //
-  //    boolean ssidOK = ssid.length() > 0;
-  //
-  //    return networkTypeOk && ssidOK;
-  //  }
-  //
-  //  public void setNetworkType(String networkType) {
-  //    this.networkType = deNull(networkType);
-  //  }
-  //
-  //  public void setSsid(String ssid) {
-  //    this.ssid = deNull(ssid);
-  //  }
-  //
-  //  public void setPassword(String password) {
-  //    this.password = deNull(password);
-  //  }
-  //
-  //  public void setHidden(boolean hidden) {
-  //    this.hidden = hidden;
-  //  }
-  //
-  //  private String deNull(String text) {
-  //    if (text == null) {
-  //      return "";
-  //    } else {
-  //      return text;
-  //    }
-  //  }
+  public String getNotes() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return notes;
+    }
+  }
+
+  public String getName() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return name;
+    }
+  }
+
+  public String getSsid() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return ssid;
+    }
+  }
+
+  public String getNetworkType() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return networkType;
+    }
+  }
+
+  public String getPassword() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return password;
+    }
+  }
+
+  public String getHidden() {
+    if (isValid() == false) {
+      return null;
+    } else {
+      return hidden;
+    }
+  }
+
+  public boolean isValid() {
+    if (notes == null) {
+      return false;
+    } else if ((name == null) || (name == "")) {
+      return false;
+    } else if ((ssid == null) || (ssid == "")) {
+      return false;
+    } else if ((networkType == null) || (networkType == "")) {
+      return false;
+    } else if (password == null) {
+      return false;
+    } else {
+      // equalsIgnoreCase to make it not case-sensitive
+
+      boolean hiddenOk = hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no");
+
+      boolean networkTypeOk =
+          networkType.equalsIgnoreCase("WEP")
+              || networkType.equalsIgnoreCase("WPA/WPA2")
+              || networkType.equalsIgnoreCase("no encryption");
+
+      boolean ssidOk = ssid.length() > 0;
+
+      return hiddenOk && networkTypeOk && ssidOk;
+    }
+  }
+
+  public void setNetworkType(String networkType) {
+    this.networkType = deNull(networkType);
+  }
+
+  public void setSsid(String ssid) {
+    this.ssid = deNull(ssid);
+  }
+
+  public void setPassword(String password) {
+    this.password = deNull(password);
+  }
+
+  public void setHidden(String hidden) {
+    this.hidden = hidden;
+  }
+
+  private String deNull(String text) {
+    if (text == null) {
+      return "";
+    } else {
+      return text;
+    }
+  }
 }

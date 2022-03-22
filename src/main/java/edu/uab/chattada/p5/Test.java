@@ -19,13 +19,34 @@ public class Test {
             "01/01/2001",
             "02/02/2022",
             "03/03/2023");
-
     System.out.println(test01);
 
     WirelessAccessPointsItem test02 =
         new WirelessAccessPointsItem(
             "UAB Wifi", "Wireless Access Points Info", "UABSECURED", "WPA/WPA2", "GoBlazer!", "No");
-
     System.out.println(test02);
+
+    WirelessAccessPointsItem test03 =
+        new WirelessAccessPointsItem("UAB Wifi", "", "UABSECURED", "WPA/WPA2", "GoBlazer!", "No");
+    System.out.println(test03);
+
+    DriverLicenseItem error01 =
+        new DriverLicenseItem("", "", "00001", null, "01/01/2001", "", "03/03/2023");
+    System.out.println(error01);
+
+    WirelessAccessPointsItem error02 =
+        new WirelessAccessPointsItem(
+            "UAB Wifi",
+            "Wireless Access Points Info",
+            "UABSECURED",
+            "non-sense",
+            "GoBlazer!",
+            "No");
+    System.out.println(error02);
+
+    WirelessAccessPointsItem error03 =
+        new WirelessAccessPointsItem(
+            "", "Wireless Access Points Info", "UABSECURED", "WPA/WPA2", "", "non-sense");
+    System.out.println(error03);
   }
 }
