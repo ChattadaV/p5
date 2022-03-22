@@ -33,7 +33,7 @@ public final class DateField extends Fields {
   //  }
 
   public DateField(String name, String value) {
-    super(name, value);
+    super(name, value); // superclass Fields
 
     //    this.year = year;
     //    this.month = month;

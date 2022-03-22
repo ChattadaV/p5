@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class DriverLicenseItem extends LockerItem {
 
   private String address;
+  private String uid;
   private String dob;
   private String issueDate;
   private String expireDate;
@@ -27,14 +28,21 @@ public class DriverLicenseItem extends LockerItem {
   //  private int expireDate_month;
   //  private int expireDate_day;
 
-  public static java.util.ArrayList<Fields> DLI_ArrayList = new java.util.ArrayList<Fields>();
+  ArrayList<Fields> DLI_ArrayList = new ArrayList<>();
 
   public DriverLicenseItem(
-      String name, String notes, String address, String dob, String issueDate, String expireDate) {
+      String name,
+      String notes,
+      String uid,
+      String address,
+      String dob,
+      String issueDate,
+      String expireDate) {
 
-    super(name, notes);
+    super(name, notes); // superclass LockerItem
 
     this.address = address;
+    this.uid = uid;
     this.dob = dob;
     this.issueDate = issueDate;
     this.expireDate = expireDate;
@@ -48,8 +56,10 @@ public class DriverLicenseItem extends LockerItem {
     //    this.expireDate_month = expireDate_month;
     //    this.expireDate_day = expireDate_day;
 
-    DLI_ArrayList.add(new TextField("Name: ", name));
     DLI_ArrayList.add(new NoteField("Notes: ", notes));
+    DLI_ArrayList.add(new TextField("License Number: ", uid));
+    DLI_ArrayList.add(new TextField("Name: ", name));
+    DLI_ArrayList.add(new TextField("Address: ", address));
     DLI_ArrayList.add(new DateField("DOB: ", dob));
     DLI_ArrayList.add(new DateField("Issue Date: ", issueDate));
     DLI_ArrayList.add(new DateField("Expire Date: ", expireDate));
@@ -66,6 +76,7 @@ public class DriverLicenseItem extends LockerItem {
     //            "Expire Date", this.expireDate_year, this.expireDate_month, this.expireDate_day);
   }
 
+  @Override
   public String toString() {
     output = "\n";
     output +=
@@ -83,6 +94,12 @@ public class DriverLicenseItem extends LockerItem {
             + "\n"
             + DLI_ArrayList.get(4).getName()
             + DLI_ArrayList.get(4).getValue()
+            + "\n"
+            + DLI_ArrayList.get(5).getName()
+            + DLI_ArrayList.get(5).getValue()
+            + "\n"
+            + DLI_ArrayList.get(6).getName()
+            + DLI_ArrayList.get(6).getValue()
             + "\n";
 
     return output;

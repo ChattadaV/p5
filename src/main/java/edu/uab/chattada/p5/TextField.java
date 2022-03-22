@@ -10,6 +10,6 @@ package edu.uab.chattada.p5;
 public class TextField extends Fields {
 
   public TextField(String name, String value) {
-    super(name, value);
+    super(name, value); // superclass Fields
   }
 }

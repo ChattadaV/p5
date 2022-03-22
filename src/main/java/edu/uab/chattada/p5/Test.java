@@ -14,11 +14,18 @@ public class Test {
         new DriverLicenseItem(
             "John Doe",
             "Driver License Info",
+            "00001",
             "123 Random St Birmingham, AL 12345",
             "01/01/2001",
             "02/02/2022",
             "03/03/2023");
 
     System.out.println(test01);
+
+    WirelessAccessPointsItem test02 =
+        new WirelessAccessPointsItem(
+            "UAB Wifi", "Wireless Access Points Info", "UABSECURED", "WPA/WPA2", "GoBlazer!", "No");
+
+    System.out.println(test02);
   }
 }

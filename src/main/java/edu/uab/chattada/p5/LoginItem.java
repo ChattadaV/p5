@@ -7,12 +7,30 @@
 
 package edu.uab.chattada.p5;
 
-/** */
+import java.util.ArrayList;
+import java.lang.String;
+import edu.uab.chattada.p5.Fields;
+
 public class LoginItem extends LockerItem {
+
+  private String username;
+  private String password;
+  private String url;
+
+  ArrayList<Fields> LoginItem_ArrayList = new ArrayList<>();
 
   public LoginItem(String name, String notes, String username, String password, String url) {
 
     super(name, notes);
+    this.username = username;
+    this.password = password;
+    this.url = url;
+
+    LoginItem_ArrayList.add(new NoteField("Notes: ", notes));
+    LoginItem_ArrayList.add(new TextField("Name: ", name));
+    LoginItem_ArrayList.add(new TextField("Username: ", username));
+    LoginItem_ArrayList.add(new TextField("Password: ", password));
+    LoginItem_ArrayList.add(new TextField("URL: ", url));
 
     // build a textfield named USERNAME with the value userName
     // add to fields
