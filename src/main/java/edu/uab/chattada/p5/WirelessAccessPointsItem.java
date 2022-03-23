@@ -13,7 +13,6 @@ import edu.uab.chattada.p5.Fields;
 
 public class WirelessAccessPointsItem extends LockerItem {
 
-  private String name;
   private String networkType;
   private String ssid;
   private String password;
@@ -60,8 +59,9 @@ public class WirelessAccessPointsItem extends LockerItem {
             + "\n"
             + WAPI_ArrayList.get(5).getName()
             + WAPI_ArrayList.get(5).getValue()
+            + "\n\n"
+            + "================================================"
             + "\n";
-
     return output;
   }
 
@@ -114,30 +114,27 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public boolean isValid() {
-    if (notes == null) {
-      return false;
-    } else if ((name == null) || (name == "")) {
-      return false;
-    } else if ((ssid == null) || (ssid == "")) {
-      return false;
-    } else if ((networkType == null) || (networkType == "")) {
-      return false;
-    } else if (password == null) {
-      return false;
-    } else {
-      // equalsIgnoreCase to make it not case-sensitive
 
-      boolean hiddenOk = hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no");
+    // equalsIgnoreCase to make it not case-sensitive
 
-      boolean networkTypeOk =
-          networkType.equalsIgnoreCase("WEP")
-              || networkType.equalsIgnoreCase("WPA/WPA2")
-              || networkType.equalsIgnoreCase("no encryption");
-
-      boolean ssidOk = ssid.length() > 0;
-
-      return hiddenOk && networkTypeOk && ssidOk;
+    if (networkType.equalsIgnoreCase("no encryption")) {
+      if ((password != null) || (password != "")) {
+        return false;
+      }
     }
+
+    boolean nameOk = name.length() > 0;
+
+    boolean hiddenOk = hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no");
+
+    boolean networkTypeOk =
+        networkType.equalsIgnoreCase("WEP")
+            || networkType.equalsIgnoreCase("WPA/WPA2")
+            || networkType.equalsIgnoreCase("no encryption");
+
+    boolean ssidOk = ssid.length() > 0;
+
+    return nameOk && hiddenOk && networkTypeOk && ssidOk;
   }
 
   public void setNetworkType(String networkType) {

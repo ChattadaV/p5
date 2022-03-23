@@ -8,6 +8,8 @@
 package edu.uab.chattada.p5;
 
 import java.util.ArrayList;
+import java.lang.String;
+import java.lang.CharSequence;
 
 public class DriverLicenseItem extends LockerItem {
 
@@ -100,6 +102,8 @@ public class DriverLicenseItem extends LockerItem {
             + "\n"
             + DLI_ArrayList.get(6).getName()
             + DLI_ArrayList.get(6).getValue()
+            + "\n\n"
+            + "================================================"
             + "\n";
 
     return output;
@@ -162,9 +166,7 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public boolean isValid() {
-    if (notes == null) {
-      return false;
-    } else if ((uid == null) || (uid == "")) {
+    if ((uid == null) || (uid == "")) {
       return false;
     } else if ((name == null) || (name == "")) {
       return false;
@@ -177,7 +179,68 @@ public class DriverLicenseItem extends LockerItem {
     } else if ((expireDate == null) || (expireDate == "")) {
       return false;
     } else {
-      return true;
+
+      boolean uidOk = uid.length() > 0;
+      boolean nameOk = name.length() > 0;
+      boolean dobOk = dob.length() > 0;
+      boolean issueDateOk = issueDate.length() > 0;
+      boolean expireDateOk = expireDate.length() > 0;
+
+      boolean addressOk =
+          (address.length() > 0)
+              && ((address.contains("AL")
+                  || address.contains("AK")
+                  || address.contains("AZ")
+                  || address.contains("AR")
+                  || address.contains("CA")
+                  || address.contains("CO")
+                  || address.contains("CT")
+                  || address.contains("DE")
+                  || address.contains("DC")
+                  || address.contains("FL")
+                  || address.contains("GA")
+                  || address.contains("HI")
+                  || address.contains("ID")
+                  || address.contains("IL")
+                  || address.contains("IN")
+                  || address.contains("IA")
+                  || address.contains("KS")
+                  || address.contains("KY")
+                  || address.contains("LA")
+                  || address.contains("ME")
+                  || address.contains("MD")
+                  || address.contains("MA")
+                  || address.contains("MI")
+                  || address.contains("MN")
+                  || address.contains("MS")
+                  || address.contains("MO")
+                  || address.contains("MT")
+                  || address.contains("NE")
+                  || address.contains("NV")
+                  || address.contains("NH")
+                  || address.contains("NJ")
+                  || address.contains("NM")
+                  || address.contains("NY")
+                  || address.contains("NC")
+                  || address.contains("ND")
+                  || address.contains("OH")
+                  || address.contains("OK")
+                  || address.contains("OR")
+                  || address.contains("PA")
+                  || address.contains("RI")
+                  || address.contains("SC")
+                  || address.contains("SD")
+                  || address.contains("TN")
+                  || address.contains("TX")
+                  || address.contains("UT")
+                  || address.contains("VT")
+                  || address.contains("VA")
+                  || address.contains("WA")
+                  || address.contains("WV")
+                  || address.contains("WI")
+                  || address.contains("WY")));
+
+      return uidOk && nameOk && dobOk && issueDateOk && expireDateOk && addressOk;
     }
   }
 
