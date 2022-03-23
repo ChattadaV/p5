@@ -15,11 +15,17 @@ public class Test {
         new DriverLicenseItem(
             "John Doe",
             "Driver License Info",
-            "00001",
+            00001,
             "123 Random St Birmingham, AL 12345",
-            "01/01/2001",
-            "02/02/2022",
-            "03/03/2023");
+            2001,
+            1,
+            1,
+            2022,
+            2,
+            2,
+            2023,
+            3,
+            3);
     System.out.println(test01);
 
     System.out.println("Successful: Test02 Driver License");
@@ -27,11 +33,17 @@ public class Test {
         new DriverLicenseItem(
             "John S. Doe",
             "Driver License Info",
-            "12345",
+            12345,
             "123 Random St Birmingham, AL 12345",
-            "1/1/01",
-            "2/2/22",
-            "3/3/23");
+            2001,
+            1,
+            1,
+            2022,
+            2,
+            2,
+            2023,
+            3,
+            3);
     System.out.println(test01);
 
     System.out.println("Successful: Test03 Wireless Access Points");
@@ -50,9 +62,45 @@ public class Test {
         new WirelessAccessPointsItem("UAB Wifi", "", "UABSECURED", "WPA/WPA2", "GoBlazer!", "No");
     System.out.println(test04);
 
+    System.out.println("Successful: Test05 Credit Card");
+    CreditCardItem test05 =
+        new CreditCardItem(
+            "John Doe",
+            "Credit Card Info",
+            1234,
+            1234,
+            1234,
+            1234,
+            2022,
+            1,
+            1,
+            123,
+            123456789,
+            12345,
+            1234567890);
+    System.out.println(test05);
+
+    System.out.println("Successful: Test06 Credit Card");
+    CreditCardItem test06 =
+        new CreditCardItem(
+            "John S. Doe",
+            "Credit Card Info",
+            1111,
+            2222,
+            3333,
+            4444,
+            2030,
+            12,
+            1,
+            555,
+            11111,
+            99999,
+            1111111111);
+    System.out.println(test06);
+
     System.out.println("Failed: Error01 Driver License. Null is not valid");
     DriverLicenseItem error01 =
-        new DriverLicenseItem("", "", "00001", null, "01/01/2001", "", "03/03/2023");
+        new DriverLicenseItem("", "", 00001, null, 2001, 1, 1, 2022, 2, 2, 2023, 3, 3);
     System.out.println(error01);
 
     System.out.println("Failed: Error02 Driver License. XX is not State abbreviation");
@@ -60,11 +108,17 @@ public class Test {
         new DriverLicenseItem(
             "John Doe",
             "Driver License Info",
-            "00001",
+            00001,
             "123 Random St Birmingham, XX 12345",
-            "01/01/2001",
-            "02/02/2022",
-            "03/03/2023");
+            2001,
+            1,
+            1,
+            2022,
+            2,
+            2,
+            2023,
+            3,
+            3);
     System.out.println(error02);
 
     System.out.println(

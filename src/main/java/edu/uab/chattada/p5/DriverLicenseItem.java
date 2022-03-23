@@ -10,11 +10,12 @@ package edu.uab.chattada.p5;
 import java.util.ArrayList;
 import java.lang.String;
 import java.lang.CharSequence;
+import java.time.LocalDate;
 
 public class DriverLicenseItem extends LockerItem {
 
   private String address;
-  private String uid;
+  private String licenseNumber;
   private String dob;
   private String issueDate;
   private String expireDate;
@@ -35,19 +36,25 @@ public class DriverLicenseItem extends LockerItem {
   public DriverLicenseItem(
       String name,
       String notes,
-      String uid,
+      int licenseNumber,
       String address,
-      String dob,
-      String issueDate,
-      String expireDate) {
+      int dobYear,
+      int dobMonth,
+      int dobDay,
+      int issueYear,
+      int issueMonth,
+      int issueDay,
+      int expireYear,
+      int expireMonth,
+      int expireDay) {
 
     super(name, notes); // superclass LockerItem
 
     this.address = address;
-    this.uid = uid;
-    this.dob = dob;
-    this.issueDate = issueDate;
-    this.expireDate = expireDate;
+    this.licenseNumber = Integer.toString(licenseNumber);
+    dob = LocalDate.of(dobYear, dobMonth, dobDay).toString();
+    issueDate = LocalDate.of(issueYear, issueMonth, issueDay).toString();
+    expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
     //    this.dob_year = dob_year;
     //    this.dob_month = dob_month;
     //    this.dob_day = dob_day;
@@ -59,7 +66,7 @@ public class DriverLicenseItem extends LockerItem {
     //    this.expireDate_day = expireDate_day;
 
     DLI_ArrayList.add(new NoteField("Notes: ", getNotes()));
-    DLI_ArrayList.add(new TextField("License Number: ", getUid()));
+    DLI_ArrayList.add(new TextField("License Number: ", getLicenseNumber()));
     DLI_ArrayList.add(new TextField("Name: ", getName()));
     DLI_ArrayList.add(new TextField("Address: ", getAddress()));
     DLI_ArrayList.add(new DateField("DOB: ", getDob()));
@@ -117,11 +124,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
-  public String getUid() {
+  public String getLicenseNumber() {
     if (isValid() == false) {
       return null;
     } else {
-      return uid;
+      return licenseNumber;
     }
   }
 
@@ -166,7 +173,7 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public boolean isValid() {
-    if ((uid == null) || (uid == "")) {
+    if ((licenseNumber == null) || (licenseNumber == "")) {
       return false;
     } else if ((name == null) || (name == "")) {
       return false;
@@ -180,7 +187,7 @@ public class DriverLicenseItem extends LockerItem {
       return false;
     } else {
 
-      boolean uidOk = uid.length() > 0;
+      boolean licenseNumberOk = licenseNumber.length() > 0;
       boolean nameOk = name.length() > 0;
       boolean dobOk = dob.length() > 0;
       boolean issueDateOk = issueDate.length() > 0;
@@ -240,7 +247,7 @@ public class DriverLicenseItem extends LockerItem {
                   || address.contains("WI")
                   || address.contains("WY")));
 
-      return uidOk && nameOk && dobOk && issueDateOk && expireDateOk && addressOk;
+      return licenseNumberOk && nameOk && dobOk && issueDateOk && expireDateOk && addressOk;
     }
   }
 
@@ -248,8 +255,8 @@ public class DriverLicenseItem extends LockerItem {
     this.notes = notes;
   }
 
-  public void setUid(String uid) {
-    this.uid = uid;
+  public void setLicenseNumber(int licenseNumber) {
+    this.licenseNumber = Integer.toString(licenseNumber);
   }
 
   public void setName(String name) {
