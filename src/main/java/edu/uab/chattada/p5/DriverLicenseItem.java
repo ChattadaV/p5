@@ -110,7 +110,7 @@ public class DriverLicenseItem extends LockerItem {
             + DLI_ArrayList.get(6).getName()
             + DLI_ArrayList.get(6).getValue()
             + "\n\n"
-            + "================================================"
+            + "================================================================================================"
             + "\n";
 
     return output;

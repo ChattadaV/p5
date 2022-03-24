@@ -103,7 +103,7 @@ public class CreditCardItem extends LockerItem {
             + CCI_ArrayList.get(7).getName()
             + CCI_ArrayList.get(7).getValue()
             + "\n\n"
-            + "================================================"
+            + "================================================================================================"
             + "\n";
 
     return output;
