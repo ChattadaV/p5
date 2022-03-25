@@ -10,9 +10,9 @@ package edu.uab.chattada.p5;
 /** */
 public class Fields {
 
-  private String name;
-  private String value;
-  private String type;
+  protected static String name;
+  protected static String value;
+  protected static String type;
 
   boolean isNotSearchAble;
 

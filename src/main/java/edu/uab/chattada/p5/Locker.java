@@ -12,12 +12,14 @@ import java.util.ArrayList;
 /** */
 public class Locker {
 
-  ArrayList<LockerItem> lockerItems;
+  ArrayList<LockerItem> lockerItems = new ArrayList<>();
 
   protected static long count = 100;
   private String uid;
   private String username;
   private String password;
+  private boolean isLocked;
+  private String output;
 
   public Locker(String username, String password) {
     this.password = password;
@@ -25,5 +27,29 @@ public class Locker {
     lockerItems = new ArrayList<>();
     this.username = username;
     this.uid = "" + ++count;
+  }
+
+  public boolean lock() {
+    this.isLocked = true;
+    return isLocked;
+  }
+
+  public boolean unlock(String password) {
+    if (this.password.matches(password) == true) {
+      this.isLocked = false;
+    } else {
+      this.isLocked = true;
+    }
+    return isLocked;
+  }
+
+  public boolean isValid() {
+    boolean result;
+    if (output != password) {
+      result = false;
+    } else {
+      result = true;
+    }
+    return result;
   }
 }
