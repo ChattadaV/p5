@@ -11,5 +11,6 @@ public class NoteField extends Fields {
 
   public NoteField(String name, String value) {
     super(name, value); // superclass Fields
+    type = "Note Field";
   }
 }

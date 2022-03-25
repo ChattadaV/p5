@@ -11,5 +11,13 @@ public class TextField extends Fields {
 
   public TextField(String name, String value) {
     super(name, value); // superclass Fields
+    type = "Text Field";
+
+    if ((name.equalsIgnoreCase("CVV")
+        || (name.equalsIgnoreCase("PIN") || (name.equalsIgnoreCase("Card Number"))))) {
+      for (int index = 0; index < value.length(); index++) {
+        this.text += "*";
+      }
+    }
   }
 }

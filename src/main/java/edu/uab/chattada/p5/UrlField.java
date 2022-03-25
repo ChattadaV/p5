@@ -15,6 +15,7 @@ public class UrlField extends Fields {
 
   public UrlField(String name, String value, String url) {
     super(name, value); // superclass Fields
+    type = "URL Field";
 
     if (isValid() == false) {
       System.out.println("Invalid Url");

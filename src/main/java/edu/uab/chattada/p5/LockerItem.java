@@ -10,6 +10,7 @@ package edu.uab.chattada.p5;
 import java.util.ArrayList;
 import java.lang.String;
 import edu.uab.chattada.p5.Fields;
+import java.time.LocalDate;
 
 /** */
 public abstract class LockerItem {
@@ -18,6 +19,10 @@ public abstract class LockerItem {
   protected String name;
   protected String notes;
   protected String output;
+  protected String type;
+  protected String dateCreated;
+  protected String dateLastChanged;
+  protected String datesChanged;
   //
   //      private static final int max = 5;
   //
@@ -26,13 +31,18 @@ public abstract class LockerItem {
   //        fields[0] = new Field();
   //        fields[1] = new
 
-  //    ArrayList<Fields> fields = new ArrayList<>();
+  ArrayList<Fields> fieldsArrayList = new ArrayList<>();
   //    fields.add(new Fields(name, notes));
 
   public LockerItem(String name, String notes) {
 
     this.name = name;
     this.notes = notes;
+    this.type = type;
+    this.output = output;
+    this.dateCreated = dateCreated;
+    this.dateLastChanged = dateLastChanged;
+    this.datesChanged = datesChanged;
 
     // build uid as textfield
     // add to fields
@@ -45,83 +55,141 @@ public abstract class LockerItem {
   public Fields get(String text) {
     // find field whose name is text
     // return field
-    if (Fields.name.matches(text) == true) {
-      return;
-    } else {
-      return null;
+
+    String result = "";
+    Fields empty = new Fields("", "");
+    int index = 0;
+    int foundIndex = 0;
+
+    while (index < (this.fieldsArrayList.size())) {
+      if (this.fieldsArrayList.get(index).name.equalsIgnoreCase(text) == true) {
+        result = this.fieldsArrayList.get(index).value;
+        foundIndex = index;
+        break;
+      }
+      index++;
     }
+    empty = this.fieldsArrayList.get(foundIndex);
+    return empty;
+
+    //    if (Fields.name.matches(text) == true) {
+    //      return;
+    //    } else {
+    //      return null;
+
   }
 
-  public Fields getFields(String text) {
+  public ArrayList<Fields> getFields() {
     // find field whose name is text
     // return field
+    return fieldsArrayList;
 
-    if (Fields.name.matches(text) == true) {
-      return;
-    } else {
-      return null;
-    }
+    //    if (Fields.name.matches(text) == true) {
+    //      return;
+    //    } else {
+    //      return null;
+    //    }
   }
 
   public boolean matchName(String text) {
     // find field in fields that has the name text
     // if successful return true
     // else false
-    if (Fields.name.matches(text) == true) {
-      return true;
-    } else {
-      return false;
+    //
+    //    if (Fields.name.matches(text) == true) {
+    //      return true;
+    //    } else {
+    //      return false;
+
+    boolean match = false;
+    for (Fields M : fieldsArrayList) {
+      if (M.getName().equalsIgnoreCase(text) == true) {
+        match = true;
+      }
     }
+    return match;
   }
 
   public boolean match(String text) {
-    if (Fields.name.matches(text) == true) {
-      return true;
-    } else {
-      return false;
+    //    if (Fields.name.matches(text) == true) {
+    //      return true;
+    //    } else {
+    //      return false;
+    //    }
+
+    boolean match = false;
+    for (Fields M : fieldsArrayList) {
+      if (M.get().equalsIgnoreCase(text) == true) {
+        match = true;
+      }
     }
+    return match;
   }
 
   public boolean contains(String text) {
-    if (Fields.name.contains(text) == true) {
-      return true;
-    } else {
-      return false;
+    //    if (Fields.name.contains(text) == true) {
+    //      return true;
+    //    } else {
+    //      return false;
+    //    }
+
+    boolean contain = false;
+    for (Fields C : fieldsArrayList) {
+      if (C.get().contains(text)) {
+        contain = true;
+      }
     }
+    return contain;
   }
 
-  public Fields set(String text, String value) {
+  public void set(String text, String value) {
     //    Fields.name = text;
     //    Fields.value = value;
+
+    String result = "";
+    int index;
+    index = 0;
+    while (index < (this.fieldsArrayList.size())) {
+      if (this.fieldsArrayList.get(index).name.equalsIgnoreCase(text) == true) {
+        this.fieldsArrayList.set(index, new TextField(text, value));
+        break;
+      }
+      index++;
+    }
   }
 
   public String getDateCreated() {
-
-    return null;
+    return LocalDate.now().toString();
   }
 
   public String getDateLastChanged() {
-
-    return null;
+    return dateLastChanged;
   }
 
   public String getDatesChanged() {
-
-    return null;
+    return datesChanged;
   }
 
   public String getType() {
-
-    return null;
+    return type;
   }
 
-  public Fields delete(String text) {
-    if (Fields.name.matches(text) == true) {
-      output = Fields.name.replace(text, "");
-    } else {
-      output = null;
+  public void delete(String text) {
+    //    if (Fields.name.matches(text) == true) {
+    //      output = Fields.name.replace(text, "");
+    //    } else {
+    //      output = null;
+    //    }
+    //    return output;
+
+    int index;
+    index = 0;
+    while (index > fieldsArrayList.size()) {
+      if (fieldsArrayList.get(index).getName().equalsIgnoreCase(text)) {
+        fieldsArrayList.remove(index);
+      }
+      index++;
     }
-    return output;
   }
 
   public boolean isDeleteable(String text) {
