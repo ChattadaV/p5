@@ -95,4 +95,10 @@ public class Locker {
     }
     return uid;
   }
+
+  public update(lockerItems lockerItems) {
+    String result;
+
+    this.lockerItems = lockerItems;
+  }
 }

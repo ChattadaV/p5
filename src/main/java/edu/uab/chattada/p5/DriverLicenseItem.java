@@ -117,31 +117,23 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public String getNotes() {
-    if (isValid() == false) {
-      return null;
-    } else {
-      return notes;
-    }
+    return notes;
+  }
+
+  public String getName() {
+    return name;
   }
 
   public String getLicenseNumber() {
-    if (isValid() == false) {
+    if (isValidLicenseNumber() == false) {
       return null;
     } else {
       return licenseNumber;
     }
   }
 
-  public String getName() {
-    if (isValid() == false) {
-      return null;
-    } else {
-      return name;
-    }
-  }
-
   public String getAddress() {
-    if (isValid() == false) {
+    if (isValidAddress() == false) {
       return null;
     } else {
       return address;
@@ -149,7 +141,7 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public String getDob() {
-    if (isValid() == false) {
+    if (isValidDob() == false) {
       return null;
     } else {
       return dob;
@@ -157,7 +149,7 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public String getIssueDate() {
-    if (isValid() == false) {
+    if (isValidIssueDate() == false) {
       return null;
     } else {
       return issueDate;
@@ -165,91 +157,198 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public String getExpireDate() {
-    if (isValid() == false) {
+    if (isValidExpireDate() == false) {
       return null;
     } else {
       return expireDate;
     }
   }
 
-  public boolean isValid() {
-    if ((licenseNumber == null) || (licenseNumber == "")) {
-      return false;
-    } else if ((name == null) || (name == "")) {
-      return false;
-    } else if ((address == null) || (address == "")) {
-      return false;
-    } else if ((dob == null) || (dob == "")) {
-      return false;
-    } else if ((issueDate == null) || (issueDate == "")) {
-      return false;
-    } else if ((expireDate == null) || (expireDate == "")) {
-      return false;
+  public boolean isValidLicenseNumber() {
+    if ((licenseNumber != null) && (licenseNumber != "") && (licenseNumber.length() > 0)) {
+      return true;
     } else {
-
-      boolean licenseNumberOk = licenseNumber.length() > 0;
-      boolean nameOk = name.length() > 0;
-      boolean dobOk = dob.length() > 0;
-      boolean issueDateOk = issueDate.length() > 0;
-      boolean expireDateOk = expireDate.length() > 0;
-
-      boolean addressOk =
-          (address.length() > 0)
-              && ((address.contains("AL")
-                  || address.contains("AK")
-                  || address.contains("AZ")
-                  || address.contains("AR")
-                  || address.contains("CA")
-                  || address.contains("CO")
-                  || address.contains("CT")
-                  || address.contains("DE")
-                  || address.contains("DC")
-                  || address.contains("FL")
-                  || address.contains("GA")
-                  || address.contains("HI")
-                  || address.contains("ID")
-                  || address.contains("IL")
-                  || address.contains("IN")
-                  || address.contains("IA")
-                  || address.contains("KS")
-                  || address.contains("KY")
-                  || address.contains("LA")
-                  || address.contains("ME")
-                  || address.contains("MD")
-                  || address.contains("MA")
-                  || address.contains("MI")
-                  || address.contains("MN")
-                  || address.contains("MS")
-                  || address.contains("MO")
-                  || address.contains("MT")
-                  || address.contains("NE")
-                  || address.contains("NV")
-                  || address.contains("NH")
-                  || address.contains("NJ")
-                  || address.contains("NM")
-                  || address.contains("NY")
-                  || address.contains("NC")
-                  || address.contains("ND")
-                  || address.contains("OH")
-                  || address.contains("OK")
-                  || address.contains("OR")
-                  || address.contains("PA")
-                  || address.contains("RI")
-                  || address.contains("SC")
-                  || address.contains("SD")
-                  || address.contains("TN")
-                  || address.contains("TX")
-                  || address.contains("UT")
-                  || address.contains("VT")
-                  || address.contains("VA")
-                  || address.contains("WA")
-                  || address.contains("WV")
-                  || address.contains("WI")
-                  || address.contains("WY")));
-
-      return licenseNumberOk && nameOk && dobOk && issueDateOk && expireDateOk && addressOk;
+      return false;
     }
   }
+
+  public boolean isValidName() {
+    if ((name != null) && (name != "") && (name.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidDob() {
+    if ((dob != null) && (dob != "") && (dob.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidIssueDate() {
+    if ((issueDate != null) && (issueDate != "") && (issueDate.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidExpireDate() {
+    if ((expireDate != null) && (expireDate != "") && (expireDate.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidAddress() {
+    if ((address != null) && (address != "") && (address.length() > 0)) {
+      if (address.contains("AL")
+          || address.contains("AK")
+          || address.contains("AZ")
+          || address.contains("AR")
+          || address.contains("CA")
+          || address.contains("CO")
+          || address.contains("CT")
+          || address.contains("DE")
+          || address.contains("DC")
+          || address.contains("FL")
+          || address.contains("GA")
+          || address.contains("HI")
+          || address.contains("ID")
+          || address.contains("IL")
+          || address.contains("IN")
+          || address.contains("IA")
+          || address.contains("KS")
+          || address.contains("KY")
+          || address.contains("LA")
+          || address.contains("ME")
+          || address.contains("MD")
+          || address.contains("MA")
+          || address.contains("MI")
+          || address.contains("MN")
+          || address.contains("MS")
+          || address.contains("MO")
+          || address.contains("MT")
+          || address.contains("NE")
+          || address.contains("NV")
+          || address.contains("NH")
+          || address.contains("NJ")
+          || address.contains("NM")
+          || address.contains("NY")
+          || address.contains("NC")
+          || address.contains("ND")
+          || address.contains("OH")
+          || address.contains("OK")
+          || address.contains("OR")
+          || address.contains("PA")
+          || address.contains("RI")
+          || address.contains("SC")
+          || address.contains("SD")
+          || address.contains("TN")
+          || address.contains("TX")
+          || address.contains("UT")
+          || address.contains("VT")
+          || address.contains("VA")
+          || address.contains("WA")
+          || address.contains("WV")
+          || address.contains("WI")
+          || address.contains("WY")) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  //  /**
+  //   * General isValid()
+  //   *
+  //   * @return
+  //   */
+  //  public boolean isValid() {
+  //    if ((licenseNumber == null) || (licenseNumber == "")) {
+  //      return false;
+  //    } else if ((name == null) || (name == "")) {
+  //      return false;
+  //    } else if ((address == null) || (address == "")) {
+  //      return false;
+  //    } else if ((dob == null) || (dob == "")) {
+  //      return false;
+  //    } else if ((issueDate == null) || (issueDate == "")) {
+  //      return false;
+  //    } else if ((expireDate == null) || (expireDate == "")) {
+  //      return false;
+  //    } else {
+  //
+  //      boolean licenseNumberOk = licenseNumber.length() > 0;
+  //      boolean nameOk = name.length() > 0;
+  //      boolean dobOk = dob.length() > 0;
+  //      boolean issueDateOk = issueDate.length() > 0;
+  //      boolean expireDateOk = expireDate.length() > 0;
+  //
+  //      boolean addressOk =
+  //          (address.length() > 0)
+  //              && ((address.contains("AL")
+  //                  || address.contains("AK")
+  //                  || address.contains("AZ")
+  //                  || address.contains("AR")
+  //                  || address.contains("CA")
+  //                  || address.contains("CO")
+  //                  || address.contains("CT")
+  //                  || address.contains("DE")
+  //                  || address.contains("DC")
+  //                  || address.contains("FL")
+  //                  || address.contains("GA")
+  //                  || address.contains("HI")
+  //                  || address.contains("ID")
+  //                  || address.contains("IL")
+  //                  || address.contains("IN")
+  //                  || address.contains("IA")
+  //                  || address.contains("KS")
+  //                  || address.contains("KY")
+  //                  || address.contains("LA")
+  //                  || address.contains("ME")
+  //                  || address.contains("MD")
+  //                  || address.contains("MA")
+  //                  || address.contains("MI")
+  //                  || address.contains("MN")
+  //                  || address.contains("MS")
+  //                  || address.contains("MO")
+  //                  || address.contains("MT")
+  //                  || address.contains("NE")
+  //                  || address.contains("NV")
+  //                  || address.contains("NH")
+  //                  || address.contains("NJ")
+  //                  || address.contains("NM")
+  //                  || address.contains("NY")
+  //                  || address.contains("NC")
+  //                  || address.contains("ND")
+  //                  || address.contains("OH")
+  //                  || address.contains("OK")
+  //                  || address.contains("OR")
+  //                  || address.contains("PA")
+  //                  || address.contains("RI")
+  //                  || address.contains("SC")
+  //                  || address.contains("SD")
+  //                  || address.contains("TN")
+  //                  || address.contains("TX")
+  //                  || address.contains("UT")
+  //                  || address.contains("VT")
+  //                  || address.contains("VA")
+  //                  || address.contains("WA")
+  //                  || address.contains("WV")
+  //                  || address.contains("WI")
+  //                  || address.contains("WY")));
+  //
+  //      return licenseNumberOk && nameOk && dobOk && issueDateOk && expireDateOk && addressOk;
+  //    }
+  //  }
 
   public void setNotes(String notes) {
     this.notes = notes;

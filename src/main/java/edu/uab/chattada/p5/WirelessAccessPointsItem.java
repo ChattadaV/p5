@@ -66,15 +66,11 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public String getNotes() {
-    if (isValid() == false) {
-      return null;
-    } else {
-      return notes;
-    }
+    return notes;
   }
 
   public String getName() {
-    if (isValid() == false) {
+    if (isValidName() == false) {
       return null;
     } else {
       return name;
@@ -82,7 +78,7 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public String getSsid() {
-    if (isValid() == false) {
+    if (isValidSsid() == false) {
       return null;
     } else {
       return ssid;
@@ -90,7 +86,7 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public String getNetworkType() {
-    if (isValid() == false) {
+    if (isValidNetworkType() == false) {
       return null;
     } else {
       return networkType;
@@ -98,7 +94,7 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public String getPassword() {
-    if (isValid() == false) {
+    if (isValidPassword() == false) {
       return null;
     } else {
       return password;
@@ -106,36 +102,91 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public String getHidden() {
-    if (isValid() == false) {
+    if (isValidHidden() == false) {
       return null;
     } else {
       return hidden;
     }
   }
 
-  public boolean isValid() {
+  public boolean isValidName() {
+    if ((name != null) && (name != "") && (name.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-    // equalsIgnoreCase to make it not case-sensitive
+  public boolean isValidHidden() {
+    if (hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+  public boolean isValidNetworkType() {
+    if (networkType.equalsIgnoreCase("WEP")
+        || networkType.equalsIgnoreCase("WPA/WPA2")
+        || networkType.equalsIgnoreCase("no encryption") == true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidPassword() {
     if (networkType.equalsIgnoreCase("no encryption")) {
       if ((password != null) || (password != "")) {
         return false;
+      } else {
+        return true;
+      }
+    } else {
+      if ((password == null) || (password == "")) {
+        return false;
+      } else {
+        return true;
       }
     }
-
-    boolean nameOk = name.length() > 0;
-
-    boolean hiddenOk = hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no");
-
-    boolean networkTypeOk =
-        networkType.equalsIgnoreCase("WEP")
-            || networkType.equalsIgnoreCase("WPA/WPA2")
-            || networkType.equalsIgnoreCase("no encryption");
-
-    boolean ssidOk = ssid.length() > 0;
-
-    return nameOk && hiddenOk && networkTypeOk && ssidOk;
   }
+
+  public boolean isValidSsid() {
+    if ((ssid != null) && (ssid != "") && (ssid.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //  /**
+  //   * General isValid()
+  //   *
+  //   * @return
+  //   */
+  //  public boolean isValid() {
+  //
+  //    // equalsIgnoreCase to make it not case-sensitive
+  //
+  //    if (networkType.equalsIgnoreCase("no encryption")) {
+  //      if ((password != null) || (password != "")) {
+  //        return false;
+  //      }
+  //    }
+  //
+  //    boolean nameOk = name.length() > 0;
+  //
+  //    boolean hiddenOk = hidden.equalsIgnoreCase("yes") || hidden.equalsIgnoreCase("no");
+  //
+  //    boolean networkTypeOk =
+  //        networkType.equalsIgnoreCase("WEP")
+  //            || networkType.equalsIgnoreCase("WPA/WPA2")
+  //            || networkType.equalsIgnoreCase("no encryption");
+  //
+  //    boolean ssidOk = ssid.length() > 0;
+  //
+  //    return nameOk && hiddenOk && networkTypeOk && ssidOk;
+  //  }
 
   public void setNetworkType(String networkType) {
     this.networkType = deNull(networkType);

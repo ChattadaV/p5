@@ -110,15 +110,11 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getNotes() {
-    if (isValid() == false) {
-      return null;
-    } else {
-      return notes;
-    }
+    return notes;
   }
 
   public String getName() {
-    if (isValid() == false) {
+    if (isValidName() == false) {
       return null;
     } else {
       return name;
@@ -126,7 +122,11 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getCardNumber() {
-    if (isValid() == false) {
+    if ((isValidCardNumber01()
+            || isValidCardNumber02()
+            || isValidCardNumber03()
+            || isValidCardNumber04())
+        == false) {
       return null;
     } else {
       return cardNumber01 + " " + cardNumber02 + " " + cardNumber03 + " " + cardNumber04;
@@ -134,7 +134,7 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getExpireDate() {
-    if (isValid() == false) {
+    if (isValidExpireDate() == false) {
       return null;
     } else {
       return expireDate;
@@ -142,7 +142,7 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getCvv() {
-    if (isValid() == false) {
+    if (isValidCvv() == false) {
       return null;
     } else {
       return cvv;
@@ -150,7 +150,7 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getPin() {
-    if (isValid() == false) {
+    if (isValidPin() == false) {
       return null;
     } else {
       return pin;
@@ -158,7 +158,7 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getZipCode() {
-    if (isValid() == false) {
+    if (isValidZipCode() == false) {
       return null;
     } else {
       return zipCode;
@@ -166,59 +166,144 @@ public class CreditCardItem extends LockerItem {
   }
 
   public String getIssuerPhone() {
-    if (isValid() == false) {
+    if (isValidIssuerPhone() == false) {
       return null;
     } else {
       return issuerPhone;
     }
   }
 
-  public boolean isValid() {
-    if ((name == null) || (name == "")) {
-      return false;
-    } else if ((cardNumber01 == null) || (cardNumber01 == "")) {
-      return false;
-    } else if ((cardNumber02 == null) || (cardNumber02 == "")) {
-      return false;
-    } else if ((cardNumber03 == null) || (cardNumber03 == "")) {
-      return false;
-    } else if ((cardNumber04 == null) || (cardNumber04 == "")) {
-      return false;
-    } else if ((expireDate == null) || (expireDate == "")) {
-      return false;
-    } else if ((cvv == null) || (cvv == "")) {
-      return false;
-    } else if ((pin == null) || (pin == "")) {
-      return false;
-    } else if ((zipCode == null) || (zipCode == "")) {
-      return false;
-    } else if ((issuerPhone == null) || (issuerPhone == "")) {
-      return false;
+  public boolean isValidName() {
+    if ((name != null) && (name != "") && (name.length() > 0)) {
+      return true;
     } else {
-
-      boolean nameOk = name.length() > 0;
-      boolean cardNumber01Ok = cardNumber01.length() == 4;
-      boolean cardNumber02Ok = cardNumber02.length() == 4;
-      boolean cardNumber03Ok = cardNumber03.length() == 4;
-      boolean cardNumber04Ok = cardNumber04.length() == 4;
-      boolean expireDateOk = expireDate.length() > 0;
-      boolean cvvOk = cvv.length() == 3;
-      boolean pinOk = pin.length() > 0;
-      boolean zipCodeOk = zipCode.length() == 5;
-      boolean issuerPhoneOk = issuerPhone.length() == 10;
-
-      return nameOk
-          && cardNumber01Ok
-          && cardNumber02Ok
-          && cardNumber03Ok
-          && cardNumber04Ok
-          && expireDateOk
-          && cvvOk
-          && pinOk
-          && zipCodeOk
-          && issuerPhoneOk;
+      return false;
     }
   }
+
+  public boolean isValidCardNumber01() {
+    if ((cardNumber01 != null) && (cardNumber01 != "") && (cardNumber01.length() == 4)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidCardNumber02() {
+    if ((cardNumber02 != null) && (cardNumber02 != "") && (cardNumber02.length() == 4)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidCardNumber03() {
+    if ((cardNumber03 != null) && (cardNumber03 != "") && (cardNumber03.length() == 4)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidCardNumber04() {
+    if ((cardNumber04 != null) && (cardNumber04 != "") && (cardNumber04.length() == 4)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidExpireDate() {
+    if ((expireDate != null) && (expireDate != "") && (expireDate.length() > 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidCvv() {
+    if ((cvv != null) && (cvv != "") && (cvv.length() == 3)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidPin() {
+    if ((pin != null) && (pin != "") && (pin.length() == 3)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidZipCode() {
+    if ((zipCode != null) && (zipCode != "") && (zipCode.length() == 5)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidIssuerPhone() {
+    if ((issuerPhone != null) && (issuerPhone != "") && (issuerPhone.length() == 10)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //  /**
+  //   * General isValid()
+  //   *
+  //   * @return
+  //   */
+  //  public boolean isValid() {
+  //    if ((name == null) || (name == "")) {
+  //      return false;
+  //    } else if ((cardNumber01 == null) || (cardNumber01 == "")) {
+  //      return false;
+  //    } else if ((cardNumber02 == null) || (cardNumber02 == "")) {
+  //      return false;
+  //    } else if ((cardNumber03 == null) || (cardNumber03 == "")) {
+  //      return false;
+  //    } else if ((cardNumber04 == null) || (cardNumber04 == "")) {
+  //      return false;
+  //    } else if ((expireDate == null) || (expireDate == "")) {
+  //      return false;
+  //    } else if ((cvv == null) || (cvv == "")) {
+  //      return false;
+  //    } else if ((pin == null) || (pin == "")) {
+  //      return false;
+  //    } else if ((zipCode == null) || (zipCode == "")) {
+  //      return false;
+  //    } else if ((issuerPhone == null) || (issuerPhone == "")) {
+  //      return false;
+  //    } else {
+  //
+  //      boolean nameOk = name.length() > 0;
+  //      boolean cardNumber01Ok = cardNumber01.length() == 4;
+  //      boolean cardNumber02Ok = cardNumber02.length() == 4;
+  //      boolean cardNumber03Ok = cardNumber03.length() == 4;
+  //      boolean cardNumber04Ok = cardNumber04.length() == 4;
+  //      boolean expireDateOk = expireDate.length() > 0;
+  //      boolean cvvOk = cvv.length() == 3;
+  //      boolean pinOk = pin.length() > 0;
+  //      boolean zipCodeOk = zipCode.length() == 5;
+  //      boolean issuerPhoneOk = issuerPhone.length() == 10;
+  //
+  //      return nameOk
+  //          && cardNumber01Ok
+  //          && cardNumber02Ok
+  //          && cardNumber03Ok
+  //          && cardNumber04Ok
+  //          && expireDateOk
+  //          && cvvOk
+  //          && pinOk
+  //          && zipCodeOk
+  //          && issuerPhoneOk;
+  //    }
+  //  }
 
   public void setNotes(String notes) {
     this.notes = notes;
