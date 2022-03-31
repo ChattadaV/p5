@@ -15,7 +15,7 @@ import java.time.LocalDate;
 /** */
 public abstract class LockerItem {
 
-  private String uid;
+  protected String uid;
   protected String name;
   protected String notes;
   protected String output;
@@ -23,6 +23,10 @@ public abstract class LockerItem {
   protected String dateCreated;
   protected String dateLastChanged;
   protected String datesChanged;
+  protected boolean contain;
+  protected boolean match;
+  protected boolean matchName;
+  private static long count = 000;
   //
   //      private static final int max = 5;
   //
@@ -43,7 +47,10 @@ public abstract class LockerItem {
     this.dateCreated = dateCreated;
     this.dateLastChanged = dateLastChanged;
     this.datesChanged = datesChanged;
-
+    this.uid = "" + ++count;
+    this.contain = contain;
+    this.match = match;
+    this.matchName = matchName;
     // build uid as textfield
     // add to fields
     // build name as textfield
@@ -79,6 +86,10 @@ public abstract class LockerItem {
 
   }
 
+  public String getUid() {
+    return uid;
+  }
+
   public ArrayList<Fields> getFields() {
     // find field whose name is text
     // return field
@@ -101,13 +112,13 @@ public abstract class LockerItem {
     //    } else {
     //      return false;
 
-    boolean match = false;
-    for (Fields M : fieldsArrayList) {
-      if (M.getName().equalsIgnoreCase(text) == true) {
-        match = true;
+    matchName = false;
+    for (Fields MatchName : fieldsArrayList) {
+      if (MatchName.getName().equalsIgnoreCase(text) == true) {
+        matchName = true;
       }
     }
-    return match;
+    return matchName;
   }
 
   public boolean match(String text) {
@@ -117,25 +128,25 @@ public abstract class LockerItem {
     //      return false;
     //    }
 
-    boolean match = false;
-    for (Fields M : fieldsArrayList) {
-      if (M.get().equalsIgnoreCase(text) == true) {
+    match = false;
+    for (Fields Match : fieldsArrayList) {
+      if (Match.getValue().equalsIgnoreCase(text) == true) {
         match = true;
       }
     }
     return match;
   }
 
-  public boolean contains(String text) {
+  public boolean contain(String text) {
     //    if (Fields.name.contains(text) == true) {
     //      return true;
     //    } else {
     //      return false;
     //    }
 
-    boolean contain = false;
-    for (Fields C : fieldsArrayList) {
-      if (C.get().contains(text)) {
+    contain = false;
+    for (Fields Contains : fieldsArrayList) {
+      if (Contains.getValue().contains(text)) {
         contain = true;
       }
     }
@@ -195,5 +206,41 @@ public abstract class LockerItem {
   public boolean isDeleteable(String text) {
 
     return true;
+  }
+
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
+
+  public void setFields(ArrayList<Fields> fieldsArrayList) {
+    this.fieldsArrayList = fieldsArrayList;
+  }
+
+  public void setMatchName(boolean matchName) {
+    this.matchName = matchName;
+  }
+
+  public void setMatch(boolean match) {
+    this.match = match;
+  }
+
+  public void setContain(boolean contain) {
+    this.contain = contain;
+  }
+
+  public void setDateCreated(String dateCreated) {
+    this.dateCreated = dateCreated;
+  }
+
+  public void setDateLastChanged(String dateLastChanged) {
+    this.dateLastChanged = dateLastChanged;
+  }
+
+  public void setDatesChanged(String datesChanged) {
+    this.datesChanged = datesChanged;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
 }

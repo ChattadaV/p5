@@ -13,11 +13,15 @@ public class TextField extends Fields {
     super(name, value); // superclass Fields
     type = "Text Field";
 
-    if ((name.equalsIgnoreCase("CVV")
-        || (name.equalsIgnoreCase("PIN") || (name.equalsIgnoreCase("Card Number"))))) {
-      for (int index = 0; index < value.length(); index++) {
-        this.text += "*";
-      }
-    }
+    //    if ((name.equalsIgnoreCase("CVV: ")
+    //        || (name.equalsIgnoreCase("PIN: ") || (name.equalsIgnoreCase("Card Number: "))))) {
+    //      if (value != null) {
+    //        for (int index = 0; index < value.length(); index++) {
+    //          this.text += "*";
+    //        }
+    //      } else {
+    //        this.text = text;
+    //      }
+    //    }
   }
 }

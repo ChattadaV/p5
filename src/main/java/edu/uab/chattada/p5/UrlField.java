@@ -13,7 +13,7 @@ public class UrlField extends Fields {
 
   private String url;
 
-  public UrlField(String name, String value, String url) {
+  public UrlField(String name, String value) {
     super(name, value); // superclass Fields
     type = "URL Field";
 

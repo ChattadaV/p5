@@ -15,21 +15,23 @@ public class Locker {
   ArrayList<LockerItem> lockerItems = new ArrayList<>();
   ArrayList<Fields> fieldsArrayList = new ArrayList<>();
   ArrayList<String> uid = new ArrayList<>();
+  ArrayList<Locker> lockerArrayList = new ArrayList<>();
 
   protected static long count = 100;
   //  private String uid;
-  private String username;
-  private String password;
-  private boolean isLocked;
-  private boolean match;
-  private String output;
+  protected String username;
+  protected String password;
+  protected boolean isLocked;
+  protected boolean match;
+  protected String output;
 
   public Locker(String username, String password) {
+    this.username = username;
     this.password = password;
 
     lockerItems = new ArrayList<>();
-    this.username = username;
     //    this.uid = "" + ++count;
+
   }
 
   public void lock() {
@@ -37,10 +39,15 @@ public class Locker {
   }
 
   public void unlock(String password) {
-    if (this.password.matches(password) == true) {
-      this.isLocked = false;
-    } else {
-      this.isLocked = true;
+    try {
+      if (this.password.matches(password) == true) {
+        this.isLocked = false;
+      } else {
+        this.isLocked = true;
+        throw new Exception();
+      }
+    } catch (Exception FailedUnlockException) {
+      System.out.println("Error: Incorrect Password.");
     }
   }
 
@@ -56,6 +63,8 @@ public class Locker {
   public void add(LockerItem item) {
     if (this.isLocked == false) {
       this.lockerItems.add(item);
+    } else {
+      this.lockerItems = lockerItems;
     }
   }
 
@@ -80,25 +89,76 @@ public class Locker {
     //    return match;
     //  }
 
-    int i = 0;
-    int index = 0;
+    int index_1 = 0;
+    int index_2 = 0;
     String contain = "";
 
-    while (i < lockerItems.size()) {
-      while (index < lockerItems.get(i).getFields().size()) {
-        if (lockerItems.get(i).get("Name: ").get().equalsIgnoreCase(text)) {
-          contain = lockerItems.get(i).get("UID: ").get();
+    while (index_1 < lockerItems.size()) {
+      while (index_2 < lockerItems.get(index_1).getFields().size()) {
+        if (lockerItems.get(index_1).get("Name: ").getValue().equalsIgnoreCase(text)) {
+          contain = lockerItems.get(index_1).get("UID: ").getValue();
           uid.add(contain);
         }
       }
-      i++;
+      index_1++;
     }
     return uid;
   }
 
-  public update(lockerItems lockerItems) {
-    String result;
+  public void update(LockerItem item) {
+    for (LockerItem update : lockerItems) {
+      try {
+        if (update.uid.equals(item.uid)) {
+          lockerItems.remove(item);
+          lockerItems.add(update);
+        } else {
+          throw new Exception();
+        }
+      } catch (Exception FailedUpdateException) {
+        System.out.println("Error: Failed to update locker system.");
+      }
+    }
+  }
 
-    this.lockerItems = lockerItems;
+  public LockerItem get(String uid) {
+    for (var item : lockerItems) {
+      if (item.get(uid).equals(uid)) {
+        return item;
+      }
+    }
+    return null;
+  }
+
+  public void delete(String uid) {
+    if (isLocked == false) {
+      int index_1 = 0;
+      int index_2 = 0;
+      boolean deletable = false;
+
+      while (index_1 < lockerItems.size()) {
+        if (lockerItems.get(index_1).match(uid)) {
+          index_2 = 1;
+          deletable = true;
+          break;
+        }
+        index_1++;
+      }
+
+      if (deletable == true) {
+        lockerItems.remove(index_2);
+      }
+    }
+  }
+
+  @Override
+  public String toString() {
+    output = "";
+    for (var toString : lockerArrayList) {
+      output += toString.getName() + toString.getValue() + "\n";
+    }
+    output +=
+        "=========================================================================================\n";
+
+    return output;
   }
 }

@@ -72,6 +72,7 @@ public class DriverLicenseItem extends LockerItem {
     DLI_ArrayList.add(new DateField("DOB: ", getDob()));
     DLI_ArrayList.add(new DateField("Issue Date: ", getIssueDate()));
     DLI_ArrayList.add(new DateField("Expire Date: ", getExpireDate()));
+    DLI_ArrayList.add(new TextField("UID: ", getUid()));
 
     //    TextField DLI_name = new TextField("Name", this.name);
     //    NoteField DLI_notes = new NoteField("Notes", this.notes);
@@ -87,31 +88,39 @@ public class DriverLicenseItem extends LockerItem {
 
   @Override
   public String toString() {
-    output = "\n";
+    //    output = "\n";
+    //    output +=
+    //        DLI_ArrayList.get(0).getName()
+    //            + DLI_ArrayList.get(0).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(1).getName()
+    //            + DLI_ArrayList.get(1).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(2).getName()
+    //            + DLI_ArrayList.get(2).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(3).getName()
+    //            + DLI_ArrayList.get(3).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(4).getName()
+    //            + DLI_ArrayList.get(4).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(5).getName()
+    //            + DLI_ArrayList.get(5).getValue()
+    //            + "\n"
+    //            + DLI_ArrayList.get(6).getName()
+    //            + DLI_ArrayList.get(6).getValue()
+    //            + "\n\n"
+    //            +
+    // "================================================================================================"
+    //            + "\n";
+
+    output = "";
+    for (var toString : DLI_ArrayList) {
+      output += toString.getName() + toString.getValue() + "\n";
+    }
     output +=
-        DLI_ArrayList.get(0).getName()
-            + DLI_ArrayList.get(0).getValue()
-            + "\n"
-            + DLI_ArrayList.get(1).getName()
-            + DLI_ArrayList.get(1).getValue()
-            + "\n"
-            + DLI_ArrayList.get(2).getName()
-            + DLI_ArrayList.get(2).getValue()
-            + "\n"
-            + DLI_ArrayList.get(3).getName()
-            + DLI_ArrayList.get(3).getValue()
-            + "\n"
-            + DLI_ArrayList.get(4).getName()
-            + DLI_ArrayList.get(4).getValue()
-            + "\n"
-            + DLI_ArrayList.get(5).getName()
-            + DLI_ArrayList.get(5).getValue()
-            + "\n"
-            + DLI_ArrayList.get(6).getName()
-            + DLI_ArrayList.get(6).getValue()
-            + "\n\n"
-            + "================================================================================================"
-            + "\n";
+        "=========================================================================================\n";
 
     return output;
   }

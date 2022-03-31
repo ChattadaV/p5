@@ -6,6 +6,8 @@
  */
 package edu.uab.chattada.p5;
 
+import java.util.ArrayList;
+
 public class Test {
 
   public static void main(String[] args) {
@@ -159,5 +161,46 @@ public class Test {
             123456,
             1111111111);
     System.out.println(error04);
+
+    // =============================================================================================
+
+    //    ArrayList<Locker> lockerArrayList = new ArrayList<>();
+    Locker lockerTest = new Locker("Username123", "Password123");
+
+    System.out.println("Test: Unlock with correct password");
+    lockerTest.lock();
+    System.out.println("Locker's locked status BEFORE is: ");
+    System.out.println(lockerTest.isLocked);
+    System.out.println("Inputing correct password");
+    lockerTest.unlock("Password123");
+    System.out.println("Locker's locked status AFTER is: ");
+    System.out.println(lockerTest.isLocked);
+
+    System.out.println(
+        "=========================================================================================\n");
+
+    System.out.println("Test: Unlock with incorrect password");
+    lockerTest.lock();
+    System.out.println("Locker's locked status BEFORE is: ");
+    System.out.println(lockerTest.isLocked);
+    System.out.println("Inputing incorrect password");
+    lockerTest.unlock("Password123123123");
+    System.out.println("Locker's locked status AFTER is: ");
+    System.out.println(lockerTest.isLocked);
+
+    System.out.println(
+        "=========================================================================================\n");
+    System.out.println("Test: Add item to locker");
+    lockerTest.unlock("Password123"); // can only add item when locker is unlocked
+    System.out.println("Before adding: ");
+    System.out.println(lockerTest);
+    lockerTest.add(test01);
+    lockerTest.add(test02);
+    lockerTest.add(test03);
+    System.out.println("After adding: ");
+    System.out.println(lockerTest);
+
+    System.out.println(
+        "=========================================================================================\n");
   }
 }

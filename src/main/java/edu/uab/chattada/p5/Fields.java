@@ -31,15 +31,31 @@ public class Fields {
     return value;
   }
 
-  //  public String getType() {
-  //    return type;
-  //  }
-
-  public String get() {
-    return value;
+  public String getType() {
+    return type;
   }
+
+  //  public String get() {
+  //    return value;
+  //  }
 
   public String getUnmasked() {
     return value;
+  }
+
+  public boolean isType(String type) {
+    return this.type.equals(type);
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
 }

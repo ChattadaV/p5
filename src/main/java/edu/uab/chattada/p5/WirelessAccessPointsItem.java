@@ -36,32 +36,42 @@ public class WirelessAccessPointsItem extends LockerItem {
     WAPI_ArrayList.add(new TextField("Network Type: ", getNetworkType()));
     WAPI_ArrayList.add(new TextField("Password: ", getPassword()));
     WAPI_ArrayList.add(new TextField("Hidden: ", getHidden()));
+    WAPI_ArrayList.add(new TextField("UID: ", getUid()));
   }
 
   @Override
   public String toString() {
-    output = "\n";
+    //    output = "\n";
+    //    output +=
+    //        WAPI_ArrayList.get(0).getName()
+    //            + WAPI_ArrayList.get(0).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(1).getName()
+    //            + WAPI_ArrayList.get(1).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(2).getName()
+    //            + WAPI_ArrayList.get(2).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(3).getName()
+    //            + WAPI_ArrayList.get(3).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(4).getName()
+    //            + WAPI_ArrayList.get(4).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(5).getName()
+    //            + WAPI_ArrayList.get(5).getValue()
+    //            + "\n\n"
+    //            +
+    // "================================================================================================"
+    //            + "\n";
+
+    output = "";
+    for (var toString : WAPI_ArrayList) {
+      output += toString.getName() + toString.getValue() + "\n";
+    }
     output +=
-        WAPI_ArrayList.get(0).getName()
-            + WAPI_ArrayList.get(0).getValue()
-            + "\n"
-            + WAPI_ArrayList.get(1).getName()
-            + WAPI_ArrayList.get(1).getValue()
-            + "\n"
-            + WAPI_ArrayList.get(2).getName()
-            + WAPI_ArrayList.get(2).getValue()
-            + "\n"
-            + WAPI_ArrayList.get(3).getName()
-            + WAPI_ArrayList.get(3).getValue()
-            + "\n"
-            + WAPI_ArrayList.get(4).getName()
-            + WAPI_ArrayList.get(4).getValue()
-            + "\n"
-            + WAPI_ArrayList.get(5).getName()
-            + WAPI_ArrayList.get(5).getValue()
-            + "\n\n"
-            + "================================================================================================"
-            + "\n";
+        "=========================================================================================\n";
+
     return output;
   }
 

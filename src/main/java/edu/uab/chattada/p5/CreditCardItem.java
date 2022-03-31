@@ -73,38 +73,47 @@ public class CreditCardItem extends LockerItem {
     CCI_ArrayList.add(new TextField("PIN: ", getPin()));
     CCI_ArrayList.add(new TextField("Zip Code: ", getZipCode()));
     CCI_ArrayList.add(new TextField("Issuer Phone Number: ", getIssuerPhone()));
+    CCI_ArrayList.add(new TextField("UID: ", getUid()));
   }
 
   @Override
   public String toString() {
-    output = "\n";
+    //    output = "\n";
+    //    output +=
+    //        CCI_ArrayList.get(0).getName()
+    //            + CCI_ArrayList.get(0).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(1).getName()
+    //            + CCI_ArrayList.get(1).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(2).getName()
+    //            + CCI_ArrayList.get(2).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(3).getName()
+    //            + CCI_ArrayList.get(3).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(4).getName()
+    //            + CCI_ArrayList.get(4).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(5).getName()
+    //            + CCI_ArrayList.get(5).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(6).getName()
+    //            + CCI_ArrayList.get(6).getValue()
+    //            + "\n"
+    //            + CCI_ArrayList.get(7).getName()
+    //            + CCI_ArrayList.get(7).getValue()
+    //            + "\n\n"
+    //            +
+    // "================================================================================================"
+    //            + "\n";
+
+    output = "";
+    for (var toString : CCI_ArrayList) {
+      output = output + toString.getName() + toString.getValue() + "\n";
+    }
     output +=
-        CCI_ArrayList.get(0).getName()
-            + CCI_ArrayList.get(0).getValue()
-            + "\n"
-            + CCI_ArrayList.get(1).getName()
-            + CCI_ArrayList.get(1).getValue()
-            + "\n"
-            + CCI_ArrayList.get(2).getName()
-            + CCI_ArrayList.get(2).getValue()
-            + "\n"
-            + CCI_ArrayList.get(3).getName()
-            + CCI_ArrayList.get(3).getValue()
-            + "\n"
-            + CCI_ArrayList.get(4).getName()
-            + CCI_ArrayList.get(4).getValue()
-            + "\n"
-            + CCI_ArrayList.get(5).getName()
-            + CCI_ArrayList.get(5).getValue()
-            + "\n"
-            + CCI_ArrayList.get(6).getName()
-            + CCI_ArrayList.get(6).getValue()
-            + "\n"
-            + CCI_ArrayList.get(7).getName()
-            + CCI_ArrayList.get(7).getValue()
-            + "\n\n"
-            + "================================================================================================"
-            + "\n";
+        "=========================================================================================\n";
 
     return output;
   }

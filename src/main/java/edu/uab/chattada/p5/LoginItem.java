@@ -17,7 +17,7 @@ public class LoginItem extends LockerItem {
   private String password;
   private String url;
 
-  ArrayList<Fields> LoginItem_ArrayList = new ArrayList<>();
+  ArrayList<Fields> LI_ArrayList = new ArrayList<>();
 
   public LoginItem(String name, String notes, String username, String password, String url) {
 
@@ -26,11 +26,11 @@ public class LoginItem extends LockerItem {
     this.password = password;
     this.url = url;
 
-    LoginItem_ArrayList.add(new NoteField("Notes: ", notes));
-    LoginItem_ArrayList.add(new TextField("Name: ", name));
-    LoginItem_ArrayList.add(new TextField("Username: ", username));
-    LoginItem_ArrayList.add(new TextField("Password: ", password));
-    LoginItem_ArrayList.add(new TextField("URL: ", url));
+    LI_ArrayList.add(new NoteField("Notes: ", notes));
+    LI_ArrayList.add(new TextField("Name: ", name));
+    LI_ArrayList.add(new TextField("Username: ", username));
+    LI_ArrayList.add(new TextField("Password: ", password));
+    LI_ArrayList.add(new UrlField("URL: ", url));
 
     // build a textfield named USERNAME with the value userName
     // add to fields
