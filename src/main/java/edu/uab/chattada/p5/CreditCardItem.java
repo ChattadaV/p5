@@ -112,8 +112,7 @@ public class CreditCardItem extends LockerItem {
     for (var toString : CCI_ArrayList) {
       output = output + toString.getName() + toString.getValue() + "\n";
     }
-    output +=
-        "=========================================================================================\n";
+    output += "\n";
 
     return output;
   }

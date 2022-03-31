@@ -68,16 +68,48 @@ public class Locker {
     }
   }
 
-  public boolean searchContains(String text) {
+  public ArrayList<String> searchContains(String text) {
     // find field in fields that has the name text
     // if successful return true
     // else false
-    for (Fields M : fieldsArrayList) {
-      if (M.getName().contains(text) == true) {
-        match = true;
+
+    //    int index_1 = 0;
+    //    int index_2 = 0;
+    //    String contain = "";
+    //
+    //    while (index_1 < lockerItems.size()) {
+    //      while (index_2 < lockerItems.get(index_1).getFields().size()) {
+    //        if (lockerItems.get(index_1).get("Name: ").getValue().equalsIgnoreCase(text)) {
+    //          contain = lockerItems.get(index_1).get("UID: ").getValue();
+    //          uid.add(contain);
+    //        }
+    //      }
+    //      index_1++;
+    //    }
+    //    return uid;
+
+    ArrayList<String> uids = new ArrayList<String>();
+    for (LockerItem Match : lockerItems) {
+      if ((Match.get("Name: ").getValue().contains(text) == true)
+          || (Match.get("Notes: ").getValue().contains(text) == true)
+          || (Match.get("License Number: ").getValue().contains(text) == true)
+          || (Match.get("Address: ").getValue().contains(text) == true)
+          || (Match.get("DOB: ").getValue().contains(text) == true)
+          || (Match.get("Issue Date: ").getValue().contains(text) == true)
+          || (Match.get("Expiration Date: ").getValue().contains(text) == true)
+          || (Match.get("SSID: ").getValue().contains(text) == true)
+          || (Match.get("Network Type: ").getValue().contains(text) == true)
+          || (Match.get("Password: ").getValue().contains(text) == true)
+          || (Match.get("Hidden: ").getValue().contains(text) == true)
+          || (Match.get("Card Number: ").getValue().contains(text) == true)
+          || (Match.get("CVV: ").getValue().contains(text) == true)
+          || (Match.get("PIN: ").getValue().contains(text) == true)
+          || (Match.get("Zip Code: ").getValue().contains(text) == true)
+          || (Match.get("Issuer Phone Number: ").getValue().contains(text) == true)) {
+        uids.add(Match.get("UID: ").getValue());
       }
     }
-    return match;
+    return uids;
   }
 
   public ArrayList<String> searchNameContains(String text) {
@@ -89,20 +121,13 @@ public class Locker {
     //    return match;
     //  }
 
-    int index_1 = 0;
-    int index_2 = 0;
-    String contain = "";
-
-    while (index_1 < lockerItems.size()) {
-      while (index_2 < lockerItems.get(index_1).getFields().size()) {
-        if (lockerItems.get(index_1).get("Name: ").getValue().equalsIgnoreCase(text)) {
-          contain = lockerItems.get(index_1).get("UID: ").getValue();
-          uid.add(contain);
-        }
+    ArrayList<String> uids = new ArrayList<String>();
+    for (LockerItem Match : lockerItems) {
+      if (Match.get("Name: ").getValue().contains(text) == true) {
+        uids.add(Match.get("UID: ").getValue());
       }
-      index_1++;
     }
-    return uid;
+    return uids;
   }
 
   public void update(LockerItem item) {
@@ -129,36 +154,31 @@ public class Locker {
     return null;
   }
 
-  public void delete(String uid) {
-    if (isLocked == false) {
-      int index_1 = 0;
-      int index_2 = 0;
-      boolean deletable = false;
+  public void delete(LockerItem item) {
+    //
+    //    if (isLocked == false) {
+    //      int index_1 = 0;
+    //      int index_2 = 0;
+    //      boolean deletable = false;
+    //
+    //      while (index_1 < lockerItems.size()) {
+    //        if (lockerItems.get(index_1).match(uid)) {
+    //          index_2 = 1;
+    //          deletable = true;
+    //          break;
+    //        }
+    //        index_1++;
+    //      }
+    //
+    //      if (deletable == true) {
+    //        lockerItems.remove(index_2);
+    //      }
+    //    }
 
-      while (index_1 < lockerItems.size()) {
-        if (lockerItems.get(index_1).match(uid)) {
-          index_2 = 1;
-          deletable = true;
-          break;
-        }
-        index_1++;
-      }
-
-      if (deletable == true) {
-        lockerItems.remove(index_2);
-      }
+    if (this.isLocked == false) {
+      this.lockerItems.remove(item);
+    } else {
+      this.lockerItems = lockerItems;
     }
-  }
-
-  @Override
-  public String toString() {
-    output = "";
-    for (var toString : lockerArrayList) {
-      output += toString.getName() + toString.getValue() + "\n";
-    }
-    output +=
-        "=========================================================================================\n";
-
-    return output;
   }
 }

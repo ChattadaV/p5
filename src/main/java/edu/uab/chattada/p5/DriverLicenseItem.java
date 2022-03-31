@@ -71,7 +71,7 @@ public class DriverLicenseItem extends LockerItem {
     DLI_ArrayList.add(new TextField("Address: ", getAddress()));
     DLI_ArrayList.add(new DateField("DOB: ", getDob()));
     DLI_ArrayList.add(new DateField("Issue Date: ", getIssueDate()));
-    DLI_ArrayList.add(new DateField("Expire Date: ", getExpireDate()));
+    DLI_ArrayList.add(new DateField("Expiration Date: ", getExpireDate()));
     DLI_ArrayList.add(new TextField("UID: ", getUid()));
 
     //    TextField DLI_name = new TextField("Name", this.name);
@@ -119,8 +119,7 @@ public class DriverLicenseItem extends LockerItem {
     for (var toString : DLI_ArrayList) {
       output += toString.getName() + toString.getValue() + "\n";
     }
-    output +=
-        "=========================================================================================\n";
+    output += "\n";
 
     return output;
   }

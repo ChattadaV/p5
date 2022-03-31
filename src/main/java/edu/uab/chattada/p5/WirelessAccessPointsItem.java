@@ -69,8 +69,7 @@ public class WirelessAccessPointsItem extends LockerItem {
     for (var toString : WAPI_ArrayList) {
       output += toString.getName() + toString.getValue() + "\n";
     }
-    output +=
-        "=========================================================================================\n";
+    output += "\n";
 
     return output;
   }

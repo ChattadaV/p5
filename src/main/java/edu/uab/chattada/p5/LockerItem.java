@@ -26,7 +26,7 @@ public abstract class LockerItem {
   protected boolean contain;
   protected boolean match;
   protected boolean matchName;
-  private static long count = 000;
+  private static long count = 100;
   //
   //      private static final int max = 5;
   //
@@ -195,8 +195,8 @@ public abstract class LockerItem {
 
     int index;
     index = 0;
-    while (index > fieldsArrayList.size()) {
-      if (fieldsArrayList.get(index).getName().equalsIgnoreCase(text)) {
+    while (index < fieldsArrayList.size()) {
+      if ((fieldsArrayList.get(index).getName().equalsIgnoreCase(text)) == true) {
         fieldsArrayList.remove(index);
       }
       index++;
