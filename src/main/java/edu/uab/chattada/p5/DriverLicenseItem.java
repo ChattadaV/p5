@@ -14,12 +14,12 @@ import java.time.LocalDate;
 
 public class DriverLicenseItem extends LockerItem {
 
-  private String address;
-  private String licenseNumber;
-  private String dob;
-  private String issueDate;
-  private String expireDate;
-  private String output;
+  protected String address;
+  protected String licenseNumber;
+  protected String dob;
+  protected String issueDate;
+  protected String expireDate;
+  protected String output;
 
   //  private int dob_year;
   //  private int dob_month;
@@ -129,7 +129,11 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public String getName() {
-    return name;
+    if (isValidName() == false) {
+      return null;
+    } else {
+      return name;
+    }
   }
 
   public String getLicenseNumber() {

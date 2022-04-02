@@ -26,20 +26,12 @@ public abstract class LockerItem {
   protected boolean contain;
   protected boolean match;
   protected boolean matchName;
-  private static long count = 100;
-  //
-  //      private static final int max = 5;
-  //
-  //
-  //          Field[] fields = new Field[max];
-  //        fields[0] = new Field();
-  //        fields[1] = new
+  protected static long count = 100;
 
   ArrayList<Fields> fieldsArrayList = new ArrayList<>();
   //    fields.add(new Fields(name, notes));
 
   public LockerItem(String name, String notes) {
-
     this.name = name;
     this.notes = notes;
     this.type = type;
@@ -51,39 +43,40 @@ public abstract class LockerItem {
     this.contain = contain;
     this.match = match;
     this.matchName = matchName;
-    // build uid as textfield
-    // add to fields
-    // build name as textfield
-    // add to fields
-    // build notes as textfield
-    // add to fields
+
+    fieldsArrayList.add(new NoteField("Notes: ", getNotes()));
+    fieldsArrayList.add(new TextField("Name: ", getName()));
+    fieldsArrayList.add(new TextField("Type: ", getType()));
+    fieldsArrayList.add(new TextField("UID: ", getUid()));
+    fieldsArrayList.add(new DateField("Date Created: ", getDateCreated()));
+    fieldsArrayList.add(new DateField("Date Last Changed: ", getDateLastChanged()));
+    fieldsArrayList.add(new DateField("Dates Changed: ", getDatesChanged()));
   }
 
   public Fields get(String text) {
-    // find field whose name is text
-    // return field
-
-    String result = "";
-    Fields empty = new Fields("", "");
+    String output = "";
+    Fields position = new Fields("", "");
     int index = 0;
     int foundIndex = 0;
 
     while (index < (this.fieldsArrayList.size())) {
       if (this.fieldsArrayList.get(index).name.equalsIgnoreCase(text) == true) {
-        result = this.fieldsArrayList.get(index).value;
+        output = this.fieldsArrayList.get(index).value;
         foundIndex = index;
         break;
       }
       index++;
     }
-    empty = this.fieldsArrayList.get(foundIndex);
-    return empty;
+    position = this.fieldsArrayList.get(foundIndex);
+    return position;
+  }
 
-    //    if (Fields.name.matches(text) == true) {
-    //      return;
-    //    } else {
-    //      return null;
+  public String getNotes() {
+    return notes;
+  }
 
+  public String getName() {
+    return name;
   }
 
   public String getUid() {
@@ -91,31 +84,20 @@ public abstract class LockerItem {
   }
 
   public ArrayList<Fields> getFields() {
-    // find field whose name is text
-    // return field
     return fieldsArrayList;
-
-    //    if (Fields.name.matches(text) == true) {
-    //      return;
-    //    } else {
-    //      return null;
-    //    }
   }
 
   public boolean matchName(String text) {
-    // find field in fields that has the name text
-    // if successful return true
-    // else false
-    //
     //    if (Fields.name.matches(text) == true) {
     //      return true;
     //    } else {
     //      return false;
 
-    matchName = false;
     for (Fields MatchName : fieldsArrayList) {
       if (MatchName.getName().equalsIgnoreCase(text) == true) {
         matchName = true;
+      } else {
+        matchName = false;
       }
     }
     return matchName;
@@ -128,10 +110,11 @@ public abstract class LockerItem {
     //      return false;
     //    }
 
-    match = false;
     for (Fields Match : fieldsArrayList) {
       if (Match.getValue().equalsIgnoreCase(text) == true) {
         match = true;
+      } else {
+        match = false;
       }
     }
     return match;
@@ -203,9 +186,12 @@ public abstract class LockerItem {
     }
   }
 
-  public boolean isDeleteable(String text) {
+  public void setNotes(String notes) {
+    this.notes = notes;
+  }
 
-    return true;
+  public void setName(String name) {
+    this.name = name;
   }
 
   public void setUid(String uid) {

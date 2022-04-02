@@ -13,15 +13,18 @@ public class TextField extends Fields {
     super(name, value); // superclass Fields
     type = "Text Field";
 
-    //    if ((name.equalsIgnoreCase("CVV: ")
-    //        || (name.equalsIgnoreCase("PIN: ") || (name.equalsIgnoreCase("Card Number: "))))) {
-    //      if (value != null) {
-    //        for (int index = 0; index < value.length(); index++) {
-    //          this.text += "*";
-    //        }
-    //      } else {
-    //        this.text = text;
-    //      }
-    //    }
+    // attempting to  mask important information. Is not working as of yet
+    if ((name.equals("CVV: ")
+        || (name.equals("PIN: ")
+            || (name.equals("Card Number: "))
+            || (name.equals("License Number: "))))) {
+      if (value != null) {
+        for (int index = 0; index < value.length(); index++) {
+          this.text += "*";
+        }
+      } else {
+        this.text = text;
+      }
+    }
   }
 }

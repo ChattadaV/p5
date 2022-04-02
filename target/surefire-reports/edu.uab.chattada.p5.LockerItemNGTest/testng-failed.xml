@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [edu.uab.chattada.p5.LockerItemNGTest]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="edu.uab.chattada.p5.LockerItemNGTest">
+        <methods>
+          <include name="testSetDateLastChanged"/>
+          <include name="testSetMatchName"/>
+          <include name="testSetDatesChanged"/>
+          <include name="testSetUid"/>
+          <include name="tearDownMethod"/>
+          <include name="testGetDateCreated"/>
+          <include name="testSetContain"/>
+          <include name="testSetType"/>
+          <include name="testGetType"/>
+          <include name="testSet"/>
+          <include name="testGetDateLastChanged"/>
+          <include name="testSetMatch"/>
+          <include name="testGetDatesChanged"/>
+          <include name="testSetName"/>
+          <include name="setUpMethod"/>
+          <include name="testMatchName"/>
+          <include name="testSetNotes"/>
+          <include name="testContain"/>
+          <include name="testDelete"/>
+          <include name="testMatch"/>
+          <include name="testSetDateCreated"/>
+          <include name="testSetFields"/>
+        </methods>
+      </class> <!-- edu.uab.chattada.p5.LockerItemNGTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.LockerItemNGTest] -->

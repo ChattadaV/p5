@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [edu.uab.chattada.p5.UrlFieldNGTest]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="edu.uab.chattada.p5.UrlFieldNGTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="testSetUrl"/>
+        </methods>
+      </class> <!-- edu.uab.chattada.p5.UrlFieldNGTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.UrlFieldNGTest] -->

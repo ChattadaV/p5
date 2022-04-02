@@ -13,11 +13,11 @@ import edu.uab.chattada.p5.Fields;
 
 public class WirelessAccessPointsItem extends LockerItem {
 
-  private String networkType;
-  private String ssid;
-  private String password;
-  private String hidden;
-  private String output;
+  protected String networkType;
+  protected String ssid;
+  protected String password;
+  protected String hidden;
+  protected String output;
 
   ArrayList<Fields> WAPI_ArrayList = new ArrayList<>();
 
@@ -60,6 +60,9 @@ public class WirelessAccessPointsItem extends LockerItem {
     //            + "\n"
     //            + WAPI_ArrayList.get(5).getName()
     //            + WAPI_ArrayList.get(5).getValue()
+    //            + "\n"
+    //            + WAPI_ArrayList.get(6).getName()
+    //            + WAPI_ArrayList.get(6).getValue()
     //            + "\n\n"
     //            +
     // "================================================================================================"

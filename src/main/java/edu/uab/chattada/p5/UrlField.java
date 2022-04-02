@@ -11,10 +11,11 @@ import java.util.regex.Pattern;
 
 public class UrlField extends Fields {
 
-  private String url;
+  protected String url;
 
-  public UrlField(String name, String value) {
-    super(name, value); // superclass Fields
+  public UrlField(String name, String url) {
+    super(name, ""); // superclass Fields
+    this.url = url;
     type = "URL Field";
 
     if (isValid() == false) {
@@ -57,7 +58,11 @@ public class UrlField extends Fields {
    */
   @Override
   public String toString() {
-    return "Url: " + url;
+    if (isValid() == true) {
+      return "URL: " + url;
+    } else {
+      return "URL: " + null;
+    }
   }
 
   /**

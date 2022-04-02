@@ -54,7 +54,7 @@ public class Test {
             12,
             1,
             555,
-            11111,
+            123,
             99999,
             1111111111);
     System.out.println(test03);
@@ -62,7 +62,7 @@ public class Test {
     System.out.println("Failed: Error01 Driver License. XX is not State abbreviation");
     DriverLicenseItem error01 =
         new DriverLicenseItem(
-            "John Doe",
+            "",
             "Driver License Info",
             00001,
             "123 Random St Birmingham, XX 12345",
@@ -78,22 +78,17 @@ public class Test {
     System.out.println(error01);
 
     System.out.println(
-        "Failed: Error03 Wireless Access Points. Non-Sense is not a valid Network Type.");
-    WirelessAccessPointsItem error03 =
+        "Failed: Error02 Wireless Access Points. Non-Sense is not a valid Network Type.");
+    WirelessAccessPointsItem error02 =
         new WirelessAccessPointsItem(
-            "UAB Wifi",
-            "Wireless Access Points Info",
-            "UABSECURED",
-            "non-sense",
-            "GoBlazer!",
-            "No");
-    System.out.println(error03);
+            "", "Wireless Access Points Info", "", "non-sense", "GoBlazer!", "No");
+    System.out.println(error02);
 
     System.out.println(
         "Failed: Error3 Credit Card. Credit card number is not 16 digits. Zip code is not 5 digits.");
-    CreditCardItem error04 =
+    CreditCardItem error03 =
         new CreditCardItem(
-            "John S. Doe",
+            "",
             "Credit Card Info",
             1111,
             2222,
@@ -106,7 +101,7 @@ public class Test {
             11111,
             123456,
             1111111111);
-    System.out.println(error04);
+    System.out.println(error03);
 
     // =============================================================================================
 
@@ -146,7 +141,7 @@ public class Test {
             12,
             1,
             555,
-            11111,
+            123,
             99999,
             1111111111));
 
@@ -180,7 +175,7 @@ public class Test {
     lockerSystem.unlock("Password123"); // can only add item when locker is unlocked
     System.out.println("Before removing: ");
     System.out.println(lockerArrayList);
-    lockerArrayList.remove(1);
+    //    lockerSystem.delete();
     //    lockerArrayList.delete("PIN: ");
     //    lockerArrayList.delete(lockerArrayList);
     System.out.println("After removing: ");

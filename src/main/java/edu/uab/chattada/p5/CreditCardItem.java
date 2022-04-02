@@ -14,16 +14,16 @@ import java.time.LocalDate;
 
 public class CreditCardItem extends LockerItem {
 
-  private String cardNumber01;
-  private String cardNumber02;
-  private String cardNumber03;
-  private String cardNumber04;
-  private String expireDate;
-  private String cvv;
-  private String pin;
-  private String zipCode;
-  private String issuerPhone;
-  private String output;
+  protected String cardNumber01;
+  protected String cardNumber02;
+  protected String cardNumber03;
+  protected String cardNumber04;
+  protected String expireDate;
+  protected String cvv;
+  protected String pin;
+  protected String zipCode;
+  protected String issuerPhone;
+  protected String output;
 
   //  private int dob_year;
   //  private int dob_month;

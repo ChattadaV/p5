@@ -15,12 +15,10 @@ public class Fields {
   protected String type;
   protected String text;
 
-  boolean isNotSearchAble;
-
   public Fields(String name, String value) {
     this.name = name;
     this.value = value;
-    //    this.type = type;
+    this.type = "Fields";
   }
 
   public String getName() {
@@ -35,17 +33,13 @@ public class Fields {
     return type;
   }
 
-  //  public String get() {
-  //    return value;
-  //  }
-
   public String getUnmasked() {
     return value;
   }
 
-  public boolean isType(String type) {
-    return this.type.equals(type);
-  }
+  //  public boolean isType(String type) {
+  //    return this.type.equals(type);
+  //  }
 
   public void setName(String name) {
     this.name = name;
@@ -57,5 +51,9 @@ public class Fields {
 
   public void setType(String type) {
     this.type = type;
+  }
+
+  public void setUnmasked(String value) {
+    this.value = value;
   }
 }

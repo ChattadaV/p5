@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="25" failures="20" name="edu.uab.chattada.p5.LockerItemNGTest" time="0.031" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.1+12-LTS"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Zulu\zulu-17\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\chattada\OneDrive - UAB - The University of Alabama at Birmingham\Documents\NetBeansProjects\EE 333-QL\p5"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vendor.url" value="http://www.azul.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="edu.uab.chattada.p5.LockerItemNGTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\chattada\OneDrive - UAB - The University of Alabama at Birmingham\Documents\NetBeansProjects\EE 333-QL\p5"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17.0.1+12-LTS"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\chattada\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Zulu\zulu-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Zulu\zulu-17\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Users\chattada\Downloads\WINDOWS.X64_193000_db_home\bin;&quot;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\MinGW\msys\1.0\bin&quot;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files (x86)\HP\IdrsOCR_15.2.10.1114\;C:\Program Files\MATLAB\R2022a\bin;C:\Users\chattada\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\chattada\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\chattada\AppData\Local\Microsoft\WindowsApps;C:\Users\chattada\.dotnet\tools;C:\Users\chattada\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;."/>
+    <property name="maven.conf" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\../conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\chattada"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="chattada"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=edu.uab.chattada.p5.LockerItemNGTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.home" value="C:\Program Files\Zulu\zulu-17"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="maven.home" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Zulu17.30+15-CA"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testContain" time="0.006">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.contain(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.contain(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testContain(LockerItemNGTest.java:361)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@4c3e4790
+Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 101
+
+
+contain
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testDelete" time="0">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.delete(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.delete(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testDelete(LockerItemNGTest.java:433)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 107
+
+
+delete
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGet" time="0.003"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDateCreated" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDateCreated()&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDateCreated()&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDateCreated(LockerItemNGTest.java:385)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 119
+
+
+getDateCreated
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDateLastChanged" time="0">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDateLastChanged()&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDateLastChanged()&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDateLastChanged(LockerItemNGTest.java:397)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 125
+
+
+getDateLastChanged
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDatesChanged" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDatesChanged()&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getDatesChanged()&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDatesChanged(LockerItemNGTest.java:409)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 131
+
+
+getDatesChanged
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetFields" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetName" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetNotes" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetType" time="0.002">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getType()&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.getType()&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetType(LockerItemNGTest.java:421)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 155
+
+
+getType
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetUid" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testMatch" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.match(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.match(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testMatch(LockerItemNGTest.java:348)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 167
+
+
+match
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testMatchName" time="0.002">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at edu.uab.chattada.p5.LockerItemNGTest.testMatchName(LockerItemNGTest.java:313)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 173
+
+
+matchName
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSet" time="0.002">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.set(String, String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.set(String, String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSet(LockerItemNGTest.java:374)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 179
+
+
+set
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetContain" time="0">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setContain(boolean)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setContain(boolean)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetContain(LockerItemNGTest.java:510)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 185
+
+
+setContain
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDateCreated" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDateCreated(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDateCreated(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDateCreated(LockerItemNGTest.java:521)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 191
+
+
+setDateCreated
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDateLastChanged" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDateLastChanged(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDateLastChanged(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDateLastChanged(LockerItemNGTest.java:532)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 197
+
+
+setDateLastChanged
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDatesChanged" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDatesChanged(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setDatesChanged(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDatesChanged(LockerItemNGTest.java:543)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 203
+
+
+setDatesChanged
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetFields" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setFields(java.util.ArrayList)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setFields(java.util.ArrayList)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetFields(LockerItemNGTest.java:477)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 209
+
+
+setFields
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetMatch" time="0.002">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setMatch(boolean)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setMatch(boolean)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetMatch(LockerItemNGTest.java:499)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 215
+
+
+setMatch
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetMatchName" time="0.002">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setMatchName(boolean)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setMatchName(boolean)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetMatchName(LockerItemNGTest.java:488)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 221
+
+
+setMatchName
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetName" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setName(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setName(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetName(LockerItemNGTest.java:455)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 227
+
+
+setName
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetNotes" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setNotes(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setNotes(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetNotes(LockerItemNGTest.java:444)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 233
+
+
+setNotes
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetType" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setType(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setType(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetType(LockerItemNGTest.java:554)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 239
+
+
+setType
+</system-out>
+  </testcase>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetUid" time="0.001">
+    <failure message="Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setUid(String)&quot; because &quot;instance&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;edu.uab.chattada.p5.LockerItem.setUid(String)&quot; because &quot;instance&quot; is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetUid(LockerItemNGTest.java:466)
+</failure>
+    <system-out>Notes: Driver License Info
+License Number: 1111
+Name: John Doe
+Address: 123 Random St Birmingham, AL 12345
+DOB: 2001-01-01
+Issue Date: 2022-02-02
+Expiration Date: 2023-03-03
+UID: 245
+
+
+setUid
+</system-out>
+  </testcase>
+</testsuite>

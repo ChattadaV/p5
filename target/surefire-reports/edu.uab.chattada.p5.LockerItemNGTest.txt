@@ -1,0 +1,89 @@
+-------------------------------------------------------------------------------
+Test set: edu.uab.chattada.p5.LockerItemNGTest
+-------------------------------------------------------------------------------
+Tests run: 25, Failures: 20, Errors: 0, Skipped: 0, Time elapsed: 0.846 sec <<< FAILURE!
+testContain(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.contain(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testContain(LockerItemNGTest.java:361)
+
+testDelete(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.delete(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testDelete(LockerItemNGTest.java:433)
+
+testGetDateCreated(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.getDateCreated()" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDateCreated(LockerItemNGTest.java:385)
+
+testGetDateLastChanged(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.getDateLastChanged()" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDateLastChanged(LockerItemNGTest.java:397)
+
+testGetDatesChanged(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.getDatesChanged()" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetDatesChanged(LockerItemNGTest.java:409)
+
+testGetType(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.getType()" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testGetType(LockerItemNGTest.java:421)
+
+testMatch(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.match(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testMatch(LockerItemNGTest.java:348)
+
+testMatchName(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at edu.uab.chattada.p5.LockerItemNGTest.testMatchName(LockerItemNGTest.java:313)
+
+testSet(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.set(String, String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSet(LockerItemNGTest.java:374)
+
+testSetContain(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setContain(boolean)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetContain(LockerItemNGTest.java:510)
+
+testSetDateCreated(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setDateCreated(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDateCreated(LockerItemNGTest.java:521)
+
+testSetDateLastChanged(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setDateLastChanged(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDateLastChanged(LockerItemNGTest.java:532)
+
+testSetDatesChanged(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setDatesChanged(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetDatesChanged(LockerItemNGTest.java:543)
+
+testSetFields(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setFields(java.util.ArrayList)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetFields(LockerItemNGTest.java:477)
+
+testSetMatch(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setMatch(boolean)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetMatch(LockerItemNGTest.java:499)
+
+testSetMatchName(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setMatchName(boolean)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetMatchName(LockerItemNGTest.java:488)
+
+testSetName(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setName(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetName(LockerItemNGTest.java:455)
+
+testSetNotes(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setNotes(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetNotes(LockerItemNGTest.java:444)
+
+testSetType(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setType(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetType(LockerItemNGTest.java:554)
+
+testSetUid(edu.uab.chattada.p5.LockerItemNGTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "edu.uab.chattada.p5.LockerItem.setUid(String)" because "instance" is null
+	at edu.uab.chattada.p5.LockerItemNGTest.testSetUid(LockerItemNGTest.java:466)
+

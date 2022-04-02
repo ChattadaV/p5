@@ -28,10 +28,9 @@ public class Locker {
   public Locker(String username, String password) {
     this.username = username;
     this.password = password;
-
-    lockerItems = new ArrayList<>();
     //    this.uid = "" + ++count;
 
+    //    lockerItems = new ArrayList<>();
   }
 
   public void lock() {
@@ -51,15 +50,6 @@ public class Locker {
     }
   }
 
-  public void isValid() {
-    boolean result;
-    if (output != password) {
-      result = false;
-    } else {
-      result = true;
-    }
-  }
-
   public void add(LockerItem item) {
     if (this.isLocked == false) {
       this.lockerItems.add(item);
@@ -68,26 +58,15 @@ public class Locker {
     }
   }
 
+  public void delete(LockerItem item) {
+    if (this.isLocked == false) {
+      this.lockerItems.remove(item);
+    } else {
+      this.lockerItems = lockerItems;
+    }
+  }
+
   public ArrayList<String> searchContains(String text) {
-    // find field in fields that has the name text
-    // if successful return true
-    // else false
-
-    //    int index_1 = 0;
-    //    int index_2 = 0;
-    //    String contain = "";
-    //
-    //    while (index_1 < lockerItems.size()) {
-    //      while (index_2 < lockerItems.get(index_1).getFields().size()) {
-    //        if (lockerItems.get(index_1).get("Name: ").getValue().equalsIgnoreCase(text)) {
-    //          contain = lockerItems.get(index_1).get("UID: ").getValue();
-    //          uid.add(contain);
-    //        }
-    //      }
-    //      index_1++;
-    //    }
-    //    return uid;
-
     ArrayList<String> uids = new ArrayList<String>();
     for (LockerItem Match : lockerItems) {
       if ((Match.get("Name: ").getValue().contains(text) == true)
@@ -113,14 +92,6 @@ public class Locker {
   }
 
   public ArrayList<String> searchNameContains(String text) {
-    //    for (Fields M : fieldsArrayList) {
-    //      if (M.get().equalsIgnoreCase(text) == true) {
-    //        match = true;
-    //      }
-    //    }
-    //    return match;
-    //  }
-
     ArrayList<String> uids = new ArrayList<String>();
     for (LockerItem Match : lockerItems) {
       if (Match.get("Name: ").getValue().contains(text) == true) {
@@ -154,31 +125,11 @@ public class Locker {
     return null;
   }
 
-  public void delete(LockerItem item) {
-    //
-    //    if (isLocked == false) {
-    //      int index_1 = 0;
-    //      int index_2 = 0;
-    //      boolean deletable = false;
-    //
-    //      while (index_1 < lockerItems.size()) {
-    //        if (lockerItems.get(index_1).match(uid)) {
-    //          index_2 = 1;
-    //          deletable = true;
-    //          break;
-    //        }
-    //        index_1++;
-    //      }
-    //
-    //      if (deletable == true) {
-    //        lockerItems.remove(index_2);
-    //      }
-    //    }
-
-    if (this.isLocked == false) {
-      this.lockerItems.remove(item);
-    } else {
-      this.lockerItems = lockerItems;
+  public void set(String name, String value) {
+    for (Fields setName : fieldsArrayList) {
+      if ((setName.getName().equalsIgnoreCase(name)) == true) {
+        setName.setValue(value);
+      }
     }
   }
 }

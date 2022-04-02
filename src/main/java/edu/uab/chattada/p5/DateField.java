@@ -11,11 +11,10 @@ package edu.uab.chattada.p5;
 
 public final class DateField extends Fields {
 
-  //  private int year;
-  //  private int month;
-  //  private int day;
-
-  private String date;
+  //  protected int year;
+  //  protected int month;
+  //  protected int day;
+  protected String date;
 
   //  public DateField(String name, String value, int year, int month, int day) {
   //    super(name, value);
@@ -34,10 +33,15 @@ public final class DateField extends Fields {
 
   public DateField(String name, String value) {
     super(name, value); // superclass Fields
-
     //    this.year = year;
     //    this.month = month;
     //    this.day = day;
-
+    //
+    //    getDate(year, month, day);
   }
+
+  //  public String getDate(int year, int month, int day) {
+  //    String date = LocalDate.of(year, month, day).toString();
+  //    return date;
+  //  }
 }

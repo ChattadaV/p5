@@ -13,9 +13,10 @@ import edu.uab.chattada.p5.Fields;
 
 public class LoginItem extends LockerItem {
 
-  private String username;
-  private String password;
-  private String url;
+  protected String username;
+  protected String password;
+  protected String url;
+  protected String type;
 
   ArrayList<Fields> LI_ArrayList = new ArrayList<>();
 
@@ -25,18 +26,63 @@ public class LoginItem extends LockerItem {
     this.username = username;
     this.password = password;
     this.url = url;
+    this.type = "Login Item";
 
-    LI_ArrayList.add(new NoteField("Notes: ", notes));
-    LI_ArrayList.add(new TextField("Name: ", name));
-    LI_ArrayList.add(new TextField("Username: ", username));
-    LI_ArrayList.add(new TextField("Password: ", password));
-    LI_ArrayList.add(new UrlField("URL: ", url));
+    LI_ArrayList.add(new NoteField("Notes: ", getNotes()));
+    LI_ArrayList.add(new TextField("Name: ", getName()));
+    LI_ArrayList.add(new TextField("Username: ", getUsername()));
+    LI_ArrayList.add(new TextField("Type: ", getType()));
+    LI_ArrayList.add(new PasswordField("Password: ", getPassword()));
+    LI_ArrayList.add(new UrlField("URL: ", getUrl()));
+  }
 
-    // build a textfield named USERNAME with the value userName
-    // add to fields
-    // build a password field name PASSWORD with value password
-    // add to fields
-    // build url field with name URL with value url
-    // add to fields
+  public String getNotes() {
+    return notes;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  @Override
+  public String getType() {
+    return type;
+  }
+
+  public void setNotes(String notes) {
+    this.notes = notes;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  @Override
+  public void setType(String type) {
+    this.type = type;
   }
 }

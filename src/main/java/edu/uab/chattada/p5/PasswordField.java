@@ -13,7 +13,8 @@ public class PasswordField extends Fields {
     super(name, value);
     type = "Password Field";
 
-    if (name.equalsIgnoreCase("Password")) {
+    // attempting to mask confidential info. Is not wokring as of yet
+    if (name.equalsIgnoreCase("Password: ")) {
       for (int index = 0; index < value.length(); index++) {
         this.text += "*";
       }
