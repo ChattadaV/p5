@@ -1,169 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="13" passed="13" failed="0" skipped="0">
+<testng-results total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-03T17:08:52Z" name="edu.uab.chattada.p5.LoginItemNGTest" finished-at="2022-04-03T17:08:52Z" duration-ms="85">
+  <suite started-at="2022-04-03T19:38:15Z" name="edu.uab.chattada.p5.LockerNGTest" finished-at="2022-04-03T19:38:15Z" duration-ms="39">
     <groups>
     </groups>
-    <test started-at="2022-04-03T17:08:52Z" name="Command line test" finished-at="2022-04-03T17:08:52Z" duration-ms="85">
-      <class name="edu.uab.chattada.p5.LoginItemNGTest">
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="42" status="PASS">
+    <test started-at="2022-04-03T19:38:15Z" name="Command line test" finished-at="2022-04-03T19:38:15Z" duration-ms="39">
+      <class name="edu.uab.chattada.p5.LockerNGTest">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testGetName()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetName" finished-at="2022-04-03T12:08:52Z" duration-ms="3" status="PASS">
+        <test-method signature="testAdd()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testAdd" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetName -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testAdd -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testGetNotes()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetNotes" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testDelete()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testDelete" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetNotes -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testDelete -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="testGetPassword()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetPassword" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testGet()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testGet" finished-at="2022-04-03T14:38:15Z" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetPassword -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testGet -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="2" status="PASS">
+        <test-method signature="testSearchContains()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSearchContains" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchContains -->
+        <test-method signature="testLock()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testLock" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLock -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testGetType()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetType" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetType -->
-        <test-method signature="testGetUrl()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetUrl" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetUrl -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testGetUsername()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testGetUsername" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testSearchNameContains()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSearchNameContains" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetUsername -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method signature="testSetName()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetName" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetName -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testSearchNameContains -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testSet()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSet" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSet -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="testSetNotes()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetNotes" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testUnlock()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testUnlock" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSetNotes -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        </test-method> <!-- testUnlock -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testSetPassword()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetPassword" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetPassword -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testSetType()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetType" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
+        <test-method signature="testUpdate()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testUpdate" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSetType -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method signature="testSetUrl()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetUrl" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetUrl -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method signature="testSetUsername()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testSetUsername" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetUsername -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="setUpMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method signature="testToString()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="testToString" finished-at="2022-04-03T12:08:52Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testToString -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LoginItemNGTest@27808f31]" started-at="2022-04-03T12:08:52Z" name="tearDownMethod" finished-at="2022-04-03T12:08:52Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-      </class> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
+        </test-method> <!-- testUpdate -->
+      </class> <!-- edu.uab.chattada.p5.LockerNGTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
+  </suite> <!-- edu.uab.chattada.p5.LockerNGTest -->
 </testng-results>

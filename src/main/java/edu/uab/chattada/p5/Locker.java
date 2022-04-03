@@ -34,16 +34,16 @@ public class Locker {
     this.isLocked = true;
   }
 
-  public void unlock(String password) {
+  public void unlock(String username, String password) {
     try {
-      if (this.password.matches(password) == true) {
+      if ((this.password.matches(password) == true) && (this.username.matches(username) == true)) {
         this.isLocked = false;
       } else {
         this.isLocked = true;
         throw new Exception();
       }
     } catch (Exception FailedUnlockException) {
-      System.out.println("Error: Incorrect Password.");
+      System.out.println("Error: Incorrect Username and/or Password.");
     }
   }
 

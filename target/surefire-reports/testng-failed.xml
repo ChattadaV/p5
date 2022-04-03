@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [edu.uab.chattada.p5.LoginItemNGTest]" verbose="0">
+<suite name="Failed suite [edu.uab.chattada.p5.LockerNGTest]" verbose="0">
   <test name="Command line test(failed)">
     <classes>
-      <class name="edu.uab.chattada.p5.LoginItemNGTest">
+      <class name="edu.uab.chattada.p5.LockerNGTest">
         <methods>
           <include name="setUpMethod"/>
-          <include name="testToString"/>
           <include name="tearDownMethod"/>
+          <include name="testAdd"/>
+          <include name="testDelete"/>
         </methods>
-      </class> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
+      </class> <!-- edu.uab.chattada.p5.LockerNGTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [edu.uab.chattada.p5.LoginItemNGTest] -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.LockerNGTest] -->

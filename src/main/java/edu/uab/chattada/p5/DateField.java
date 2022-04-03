@@ -7,13 +7,7 @@
 
 package edu.uab.chattada.p5;
 
-// import java.time.LocalDate;
-
 public final class DateField extends Fields {
-
-  //  protected int year;
-  //  protected int month;
-  //  protected int day;
   protected String date;
 
   public DateField(String name, String value) {

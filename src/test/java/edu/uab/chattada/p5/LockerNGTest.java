@@ -69,7 +69,7 @@ public class LockerNGTest {
     System.out.println("unlock");
 
     Locker instance = lockerSystem;
-    instance.unlock("Password123");
+    instance.unlock("Username123", "Password123");
     boolean expResult = false;
     boolean result = instance.isLocked;
     assertEquals(result, expResult);
@@ -81,7 +81,7 @@ public class LockerNGTest {
     System.out.println("add");
 
     Locker instance = lockerSystem;
-    instance.unlock("Password123");
+    instance.unlock("Username123", "Password123");
     instance.add(driverLicense);
   }
 
@@ -91,7 +91,7 @@ public class LockerNGTest {
     System.out.println("delete");
 
     Locker instance = lockerSystem;
-    instance.unlock("Password123");
+    instance.unlock("Username123", "Password123");
     instance.delete(driverLicense);
   }
 
