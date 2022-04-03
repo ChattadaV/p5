@@ -86,6 +86,11 @@ public class LoginItem extends LockerItem {
     }
   }
 
+  @Override
+  public String getType() {
+    return type;
+  }
+
   public boolean isValidName() {
     if ((name != null) || (name != "")) {
       return name.length() > 0;
@@ -134,11 +139,6 @@ public class LoginItem extends LockerItem {
                 + "._\\+~#?&//=]*)");
     var m = p.matcher(url);
     return m.matches();
-  }
-
-  @Override
-  public String getType() {
-    return type;
   }
 
   @Override

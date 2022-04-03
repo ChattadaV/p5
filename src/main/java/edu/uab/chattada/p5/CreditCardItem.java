@@ -25,16 +25,6 @@ public class CreditCardItem extends LockerItem {
   protected String issuerPhone;
   protected String output;
 
-  //  private int dob_year;
-  //  private int dob_month;
-  //  private int dob_day;
-  //  private int issueDate_year;
-  //  private int issueDate_month;
-  //  private int issueDate_day;
-  //  private int expireDate_year;
-  //  private int expireDate_month;
-  //  private int expireDate_day;
-
   ArrayList<Fields> CCI_ArrayList = new ArrayList<>();
 
   public CreditCardItem(
@@ -79,36 +69,6 @@ public class CreditCardItem extends LockerItem {
 
   @Override
   public String toString() {
-    //    output = "\n";
-    //    output +=
-    //        CCI_ArrayList.get(0).getName()
-    //            + CCI_ArrayList.get(0).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(1).getName()
-    //            + CCI_ArrayList.get(1).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(2).getName()
-    //            + CCI_ArrayList.get(2).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(3).getName()
-    //            + CCI_ArrayList.get(3).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(4).getName()
-    //            + CCI_ArrayList.get(4).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(5).getName()
-    //            + CCI_ArrayList.get(5).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(6).getName()
-    //            + CCI_ArrayList.get(6).getValue()
-    //            + "\n"
-    //            + CCI_ArrayList.get(7).getName()
-    //            + CCI_ArrayList.get(7).getValue()
-    //            + "\n\n"
-    //            +
-    // "================================================================================================"
-    //            + "\n";
-
     output = "";
     for (var toString : CCI_ArrayList) {
       output = output + toString.getName() + toString.getValue() + "\n";

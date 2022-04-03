@@ -42,33 +42,6 @@ public class WirelessAccessPointsItem extends LockerItem {
 
   @Override
   public String toString() {
-    //    output = "\n";
-    //    output +=
-    //        WAPI_ArrayList.get(0).getName()
-    //            + WAPI_ArrayList.get(0).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(1).getName()
-    //            + WAPI_ArrayList.get(1).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(2).getName()
-    //            + WAPI_ArrayList.get(2).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(3).getName()
-    //            + WAPI_ArrayList.get(3).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(4).getName()
-    //            + WAPI_ArrayList.get(4).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(5).getName()
-    //            + WAPI_ArrayList.get(5).getValue()
-    //            + "\n"
-    //            + WAPI_ArrayList.get(6).getName()
-    //            + WAPI_ArrayList.get(6).getValue()
-    //            + "\n\n"
-    //            +
-    // "================================================================================================"
-    //            + "\n";
-
     output = "";
     for (var toString : WAPI_ArrayList) {
       output += toString.getName() + toString.getValue() + "\n";
@@ -120,6 +93,10 @@ public class WirelessAccessPointsItem extends LockerItem {
     } else {
       return hidden;
     }
+  }
+
+  public String getType() {
+    return type;
   }
 
   public boolean isValidName() {
@@ -223,6 +200,10 @@ public class WirelessAccessPointsItem extends LockerItem {
 
   public void setHidden(String hidden) {
     this.hidden = hidden;
+  }
+
+  public void setTtpe(String type) {
+    this.type = type;
   }
 
   private String deNull(String text) {

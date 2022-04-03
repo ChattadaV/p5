@@ -51,20 +51,6 @@ public final class UrlField extends Fields {
   }
 
   /**
-   * Get a text representation of object consisting of <code>QrUrl: description</code>
-   *
-   * @return text representation
-   */
-  @Override
-  public String toString() {
-    if (isValid() == true) {
-      return "URL: " + url;
-    } else {
-      return "URL: " + null;
-    }
-  }
-
-  /**
    * Set (or change) the URL, it will affect the validity of the object
    *
    * @param url new url

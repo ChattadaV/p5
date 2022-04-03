@@ -20,17 +20,6 @@ public class DriverLicenseItem extends LockerItem {
   protected String issueDate;
   protected String expireDate;
   protected String output;
-  //  protected String type;
-
-  //  private int dob_year;
-  //  private int dob_month;
-  //  private int dob_day;
-  //  private int issueDate_year;
-  //  private int issueDate_month;
-  //  private int issueDate_day;
-  //  private int expireDate_year;
-  //  private int expireDate_month;
-  //  private int expireDate_day;
 
   ArrayList<Fields> DLI_ArrayList = new ArrayList<>();
 
@@ -57,15 +46,6 @@ public class DriverLicenseItem extends LockerItem {
     dob = LocalDate.of(dobYear, dobMonth, dobDay).toString();
     issueDate = LocalDate.of(issueYear, issueMonth, issueDay).toString();
     expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
-    //    this.dob_year = dob_year;
-    //    this.dob_month = dob_month;
-    //    this.dob_day = dob_day;
-    //    this.issueDate_year = issueDate_year;
-    //    this.issueDate_month = issueDate_month;
-    //    this.issueDate_day = issueDate_day;
-    //    this.expireDate_year = expireDate_year;
-    //    this.expireDate_month = expireDate_month;
-    //    this.expireDate_day = expireDate_day;
 
     DLI_ArrayList.add(new NoteField("Notes: ", getNotes()));
     DLI_ArrayList.add(new TextField("License Number: ", getLicenseNumber()));
@@ -75,48 +55,10 @@ public class DriverLicenseItem extends LockerItem {
     DLI_ArrayList.add(new DateField("Issue Date: ", getIssueDate()));
     DLI_ArrayList.add(new DateField("Expiration Date: ", getExpireDate()));
     DLI_ArrayList.add(new TextField("UID: ", getUid()));
-
-    //    TextField DLI_name = new TextField("Name", this.name);
-    //    NoteField DLI_notes = new NoteField("Notes", this.notes);
-    //    TextField DLI_address = new TextField("Address", this.address);
-    //    TextField DLI_dob = new TextField("DOB", this.dob);
-    //    DateField DLI_issueDate =
-    //        new DateField("Issue Date", this.issueDate_year, this.issueDate_month,
-    // this.issueDate_day);
-    //    DateField DLI_expireDate =
-    //        new DateField(
-    //            "Expire Date", this.expireDate_year, this.expireDate_month, this.expireDate_day);
   }
 
   @Override
   public String toString() {
-    //    output = "\n";
-    //    output +=
-    //        DLI_ArrayList.get(0).getName()
-    //            + DLI_ArrayList.get(0).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(1).getName()
-    //            + DLI_ArrayList.get(1).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(2).getName()
-    //            + DLI_ArrayList.get(2).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(3).getName()
-    //            + DLI_ArrayList.get(3).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(4).getName()
-    //            + DLI_ArrayList.get(4).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(5).getName()
-    //            + DLI_ArrayList.get(5).getValue()
-    //            + "\n"
-    //            + DLI_ArrayList.get(6).getName()
-    //            + DLI_ArrayList.get(6).getValue()
-    //            + "\n\n"
-    //            +
-    // "================================================================================================"
-    //            + "\n";
-
     output = "";
     for (var toString : DLI_ArrayList) {
       output += toString.getName() + toString.getValue() + "\n";
