@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="edu.uab.chattada.p5.LoginItemNGTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="13" failures="0" name="edu.uab.chattada.p5.LoginItemNGTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS"/>
@@ -65,13 +65,14 @@
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetName" time="0.004"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetNotes" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetPassword" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetType" time="0.001"/>
-  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetUrl" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetType" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetUrl" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testGetUsername" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetName" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetName" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetNotes" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetPassword" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetType" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetUrl" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetUrl" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testSetUsername" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LoginItemNGTest" name="testToString" time="0.001"/>
 </testsuite>

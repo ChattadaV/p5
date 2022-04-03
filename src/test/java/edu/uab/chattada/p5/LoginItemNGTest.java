@@ -35,14 +35,46 @@ public class LoginItemNGTest {
             "Username123",
             "Password123",
             "https://www.uab.edu");
+    System.out.println(successful);
 
     error =
         new LoginItem(
             "UAB Username and Password", "Access to main portal", "", "", "htt:/ww.ax.y.z.x");
+    System.out.println(error);
   }
 
   @AfterMethod
   public void tearDownMethod() throws Exception {}
+
+  /** Test of toString method, of class LoginItem. */
+  @Test
+  public void testToString() {
+    System.out.println("toString");
+
+    LoginItem instance_1 = successful;
+    String expResult_1 =
+        "Notes: Access to main portal\n"
+            + "Name: UAB Username and Password\n"
+            + "Username: Username123\n"
+            + "Type: Login Item\n"
+            + "Password: Password123\n"
+            + "URL: https://www.uab.edu"
+            + "\n\n";
+    String result_1 = instance_1.toString();
+    assertEquals(result_1, expResult_1);
+
+    LoginItem instance_2 = error;
+    String expResult_2 =
+        "Notes: Access to main portal\n"
+            + "Name: UAB Username and Password\n"
+            + "Username: null\n"
+            + "Type: Login Item\n"
+            + "Password: null\n"
+            + "URL: null"
+            + "\n\n";
+    String result_2 = instance_2.toString();
+    assertEquals(result_2, expResult_2);
+  }
 
   /** Test of getNotes method, of class LoginItem. */
   @Test

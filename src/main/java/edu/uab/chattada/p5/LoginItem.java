@@ -34,13 +34,26 @@ public class LoginItem extends LockerItem {
     LI_ArrayList.add(new TextField("Username: ", getUsername()));
     LI_ArrayList.add(new TextField("Type: ", getType()));
     LI_ArrayList.add(new PasswordField("Password: ", getPassword()));
-    LI_ArrayList.add(new UrlField("URL: ", getUrl()));
+    LI_ArrayList.add(new TextField("URL: ", getUrl()));
   }
 
+  @Override
+  public String toString() {
+    output = "";
+    for (var toString : LI_ArrayList) {
+      output += toString.getName() + toString.getValue() + "\n";
+    }
+    output += "\n";
+
+    return output;
+  }
+
+  @Override
   public String getNotes() {
     return notes;
   }
 
+  @Override
   public String getName() {
     if (isValidName() == false) {
       return null;
@@ -75,12 +88,7 @@ public class LoginItem extends LockerItem {
 
   public boolean isValidName() {
     if ((name != null) || (name != "")) {
-      if ((name.length() > 0)) {
-        return true;
-      } else {
-        return false;
-      }
-
+      return name.length() > 0;
     } else {
       return false;
     }
@@ -88,12 +96,7 @@ public class LoginItem extends LockerItem {
 
   public boolean isValidUsername() {
     if ((username != null) || (username != "")) {
-      if ((username.length() > 0)) {
-        return true;
-      } else {
-        return false;
-      }
-
+      return username.length() > 0;
     } else {
       return false;
     }
@@ -101,12 +104,7 @@ public class LoginItem extends LockerItem {
 
   public boolean isValidPassword() {
     if ((password != null) || (password != "")) {
-      if ((password.length() > 0)) {
-        return true;
-      } else {
-        return false;
-      }
-
+      return password.length() > 0;
     } else {
       return false;
     }
@@ -143,10 +141,12 @@ public class LoginItem extends LockerItem {
     return type;
   }
 
+  @Override
   public void setNotes(String notes) {
     this.notes = notes;
   }
 
+  @Override
   public void setName(String name) {
     this.name = name;
   }

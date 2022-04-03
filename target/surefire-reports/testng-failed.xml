@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [edu.uab.chattada.p5.CreditCardItemNGTest]" verbose="0">
+<suite name="Failed suite [edu.uab.chattada.p5.LoginItemNGTest]" verbose="0">
   <test name="Command line test(failed)">
     <classes>
-      <class name="edu.uab.chattada.p5.CreditCardItemNGTest">
+      <class name="edu.uab.chattada.p5.LoginItemNGTest">
         <methods>
-          <include name="testSetCvv"/>
-          <include name="testSetCardNumber01"/>
-          <include name="testSetZipCode"/>
-          <include name="testSetCardNumber03"/>
-          <include name="testSetCardNumber04"/>
-          <include name="testSetName"/>
-          <include name="tearDownMethod"/>
-          <include name="testSetPin"/>
-          <include name="testSetExpireDate"/>
           <include name="setUpMethod"/>
-          <include name="testSetCardNumber02"/>
-          <include name="testSetIssuerPhone"/>
+          <include name="testToString"/>
+          <include name="tearDownMethod"/>
         </methods>
-      </class> <!-- edu.uab.chattada.p5.CreditCardItemNGTest -->
+      </class> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [edu.uab.chattada.p5.CreditCardItemNGTest] -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.LoginItemNGTest] -->

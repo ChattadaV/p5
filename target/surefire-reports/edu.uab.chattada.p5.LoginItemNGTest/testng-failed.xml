@@ -6,8 +6,8 @@
       <class name="edu.uab.chattada.p5.LoginItemNGTest">
         <methods>
           <include name="setUpMethod"/>
+          <include name="testToString"/>
           <include name="tearDownMethod"/>
-          <include name="testSetType"/>
         </methods>
       </class> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
     </classes>

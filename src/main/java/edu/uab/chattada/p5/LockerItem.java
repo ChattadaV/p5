@@ -29,7 +29,6 @@ public abstract class LockerItem {
   protected static long count = 100;
 
   ArrayList<Fields> fieldsArrayList = new ArrayList<>();
-  //    fields.add(new Fields(name, notes));
 
   public LockerItem(String name, String notes) {
     this.name = name;
@@ -88,11 +87,6 @@ public abstract class LockerItem {
   }
 
   public boolean matchName(String text) {
-    //        if (Fields.name.matches(text) == true)) {
-    //          return true;
-    //        } else {
-    //          return false;
-
     for (Fields MatchName : fieldsArrayList) {
       matchName = MatchName.getName().equalsIgnoreCase(text);
       if (matchName == true) {
@@ -103,12 +97,6 @@ public abstract class LockerItem {
   }
 
   public boolean match(String text) {
-    //    if (Fields.name.matches(text) == true) {
-    //      return true;
-    //    } else {
-    //      return false;
-    //    }
-
     for (Fields Match : fieldsArrayList) {
       if (Match.getValue() != null) {
         match = Match.getValue().equalsIgnoreCase(text);
@@ -123,12 +111,6 @@ public abstract class LockerItem {
   }
 
   public boolean contain(String text) {
-    //    if (Fields.name.contains(text) == true) {
-    //      return true;
-    //    } else {
-    //      return false;
-    //    }
-
     contain = false;
     for (Fields Contains : fieldsArrayList) {
       if (Contains.getValue() != null) {
@@ -144,9 +126,6 @@ public abstract class LockerItem {
   }
 
   public void set(String text, String value) {
-    //    Fields.name = text;
-    //    Fields.value = value;
-
     String result = "";
     int index;
     index = 0;
@@ -176,13 +155,6 @@ public abstract class LockerItem {
   }
 
   public void delete(String text) {
-    //    if (Fields.name.matches(text) == true) {
-    //      output = Fields.name.replace(text, "");
-    //    } else {
-    //      output = null;
-    //    }
-    //    return output;
-
     int index;
     index = 0;
     while (index < fieldsArrayList.size()) {

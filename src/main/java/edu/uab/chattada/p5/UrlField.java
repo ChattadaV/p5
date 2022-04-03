@@ -9,7 +9,7 @@ package edu.uab.chattada.p5;
 
 import java.util.regex.Pattern;
 
-public class UrlField extends Fields {
+public final class UrlField extends Fields {
 
   protected String url;
 
@@ -17,7 +17,7 @@ public class UrlField extends Fields {
     super(name, ""); // superclass Fields
     type = "URL Field";
 
-    if (isValid() == false) {
+    if (isValid() == true) {
       this.url = url;
     } else {
       this.url = null;

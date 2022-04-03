@@ -28,9 +28,6 @@ public class Locker {
   public Locker(String username, String password) {
     this.username = username;
     this.password = password;
-    //    this.uid = "" + ++count;
-
-    //    lockerItems = new ArrayList<>();
   }
 
   public void lock() {
@@ -59,10 +56,15 @@ public class Locker {
   }
 
   public void delete(LockerItem item) {
-    if (this.isLocked == false) {
-      this.lockerItems.remove(item);
-    } else {
-      this.lockerItems = lockerItems;
+    try {
+      if (this.isLocked == false) {
+        this.lockerItems.remove(item);
+      } else {
+        this.lockerItems = lockerItems;
+        throw new Exception();
+      }
+    } catch (Exception FailedDelteException) {
+      System.out.println("Error: Failed to delete an item from locker.");
     }
   }
 
@@ -117,12 +119,17 @@ public class Locker {
   }
 
   public LockerItem get(String uid) {
-    for (var item : lockerItems) {
-      if (item.get(uid).equals(uid)) {
-        return item;
+    try {
+      for (var item : lockerItems) {
+        if (item.get(uid).equals(uid)) {
+          return item;
+        }
       }
+      throw new Exception();
+    } catch (Exception FailedGetException) {
+      System.out.println("Error: Failed to obtain an item using uid.");
+      return null;
     }
-    return null;
   }
 
   public void set(String name, String value) {
