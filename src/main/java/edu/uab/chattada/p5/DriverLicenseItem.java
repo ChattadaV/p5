@@ -20,6 +20,7 @@ public class DriverLicenseItem extends LockerItem {
   protected String issueDate;
   protected String expireDate;
   protected String output;
+  //  protected String type;
 
   //  private int dob_year;
   //  private int dob_month;
@@ -49,6 +50,7 @@ public class DriverLicenseItem extends LockerItem {
       int expireDay) {
 
     super(name, notes); // superclass LockerItem
+    this.type = "Driver License";
 
     this.address = address;
     this.licenseNumber = Integer.toString(licenseNumber);

@@ -29,6 +29,7 @@ public class WirelessAccessPointsItem extends LockerItem {
     this.networkType = networkType;
     this.password = password;
     this.hidden = hidden;
+    this.type = "Wireless Access Points";
 
     WAPI_ArrayList.add(new NoteField("Notes: ", getNotes()));
     WAPI_ArrayList.add(new TextField("Name: ", getName()));

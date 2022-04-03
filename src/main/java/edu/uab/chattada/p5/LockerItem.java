@@ -88,16 +88,15 @@ public abstract class LockerItem {
   }
 
   public boolean matchName(String text) {
-    //    if (Fields.name.matches(text) == true) {
-    //      return true;
-    //    } else {
-    //      return false;
+    //        if (Fields.name.matches(text) == true)) {
+    //          return true;
+    //        } else {
+    //          return false;
 
     for (Fields MatchName : fieldsArrayList) {
-      if (MatchName.getName().equalsIgnoreCase(text) == true) {
-        matchName = true;
-      } else {
-        matchName = false;
+      matchName = MatchName.getName().equalsIgnoreCase(text);
+      if (matchName == true) {
+        break;
       }
     }
     return matchName;
@@ -111,10 +110,13 @@ public abstract class LockerItem {
     //    }
 
     for (Fields Match : fieldsArrayList) {
-      if (Match.getValue().equalsIgnoreCase(text) == true) {
-        match = true;
+      if (Match.getValue() != null) {
+        match = Match.getValue().equalsIgnoreCase(text);
+        if (match == true) {
+          break;
+        }
       } else {
-        match = false;
+        break;
       }
     }
     return match;
@@ -129,8 +131,13 @@ public abstract class LockerItem {
 
     contain = false;
     for (Fields Contains : fieldsArrayList) {
-      if (Contains.getValue().contains(text)) {
-        contain = true;
+      if (Contains.getValue() != null) {
+        contain = Contains.getValue().equalsIgnoreCase(text);
+        if (contain == true) {
+          break;
+        }
+      } else {
+        break;
       }
     }
     return contain;

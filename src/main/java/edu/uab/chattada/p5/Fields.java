@@ -34,7 +34,19 @@ public class Fields {
   }
 
   public String getUnmasked() {
-    return value;
+    if (isMasked() == true) {
+      return text;
+    } else {
+      return value;
+    }
+  }
+
+  public boolean isMasked() {
+    if (this.text.isEmpty()) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   //  public boolean isType(String type) {

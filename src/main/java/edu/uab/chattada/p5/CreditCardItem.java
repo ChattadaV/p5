@@ -53,6 +53,7 @@ public class CreditCardItem extends LockerItem {
       int issuerPhone) {
 
     super(name, notes); // superclass LockerItem
+    this.type = "Credit Card";
 
     expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
 
