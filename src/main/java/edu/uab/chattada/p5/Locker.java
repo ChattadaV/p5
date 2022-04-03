@@ -22,13 +22,17 @@ public class Locker {
   ArrayList<String> uid = new ArrayList<>();
   ArrayList<Locker> lockerArrayList = new ArrayList<>();
 
-  // set type
+  /** set type of count */
   protected static long count = 100;
-  //  private String uid;
+  /** set type of username */
   protected String username;
+  /** set type of password */
   protected String password;
+  /** set type of isLocked */
   protected boolean isLocked;
+  /** set type of match */
   protected boolean match;
+  /** set type of output */
   protected String output;
 
   /**
@@ -101,7 +105,7 @@ public class Locker {
    * searchContains to get the ArrayList of uids where input text is found inside locker system
    *
    * @param text - String input text used to search through all locker items inside locker system
-   * @return ArrayList<String> of uids where the input text is found inside locker system
+   * @return ArrayList of String of uids where the input text is found inside locker system
    */
   public ArrayList<String> searchContains(String text) {
     ArrayList<String> uids = new ArrayList<String>();
@@ -134,7 +138,7 @@ public class Locker {
    *
    * @param text - String input text used to search through all locker items' name inside locker
    *     system
-   * @return ArrayList<String> of uids where the input text is found inside locker system
+   * @return ArrayList of String of uids where the input text is found inside locker system
    */
   public ArrayList<String> searchNameContains(String text) {
     ArrayList<String> uids = new ArrayList<String>();

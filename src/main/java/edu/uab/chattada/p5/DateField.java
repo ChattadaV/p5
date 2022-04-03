@@ -14,6 +14,8 @@ package edu.uab.chattada.p5;
  * @author Chattada Viriyaphap <chattada@uab.edu>
  */
 public final class DateField extends Fields {
+
+  /** set type of date */
   protected String date;
 
   /**

@@ -15,10 +15,13 @@ package edu.uab.chattada.p5;
  */
 public class Fields {
 
-  // set type
+  /** set type of name */
   protected String name;
+  /** set type of value */
   protected String value;
+  /** set type of type */
   protected String type;
+  /** set type of text */
   protected String text;
 
   /**

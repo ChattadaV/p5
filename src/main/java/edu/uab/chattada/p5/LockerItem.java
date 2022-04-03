@@ -19,18 +19,29 @@ import java.time.LocalDate;
  */
 public abstract class LockerItem {
 
-  // set type
+  /** set type of uid */
   protected String uid;
+  /** set type of name */
   protected String name;
+  /** set type of notes */
   protected String notes;
+  /** set type of output */
   protected String output;
+  /** set type of type */
   protected String type;
+  /** set type of dateCreated */
   protected String dateCreated;
+  /** set type of dateLastChanged */
   protected String dateLastChanged;
+  /** set type of datesChanged */
   protected String datesChanged;
+  /** set type of contain */
   protected boolean contain;
+  /** set type of match */
   protected boolean match;
+  /** set type of matchName */
   protected boolean matchName;
+  /** set type of count */
   protected static long count = 100;
 
   // ArrayList of fields of each locker item
@@ -121,7 +132,7 @@ public abstract class LockerItem {
   /**
    * getFields to get ArrayList of Fields of locker item
    *
-   * @return ArrayList<Fields> of locker item
+   * @return ArrayList of Fields of locker item
    */
   public ArrayList<Fields> getFields() {
     return fieldsArrayList;
@@ -288,7 +299,7 @@ public abstract class LockerItem {
   /**
    * set ArrayList Fields
    *
-   * @param fieldsArrayList - ArrayList<Fields> of locker items
+   * @param fieldsArrayList - ArrayList of Fields of locker items
    */
   public void setFields(ArrayList<Fields> fieldsArrayList) {
     this.fieldsArrayList = fieldsArrayList;

@@ -19,10 +19,13 @@ import java.util.regex.Pattern;
  */
 public class LoginItem extends LockerItem {
 
-  // set type
+  /** set type of username */
   protected String username;
+  /** set type of password */
   protected String password;
+  /** set type of url */
   protected String url;
+  /** set type of type */
   protected String type;
 
   // ArrayList of all Login items

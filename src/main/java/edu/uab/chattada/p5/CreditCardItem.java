@@ -20,16 +20,25 @@ import java.time.LocalDate;
  */
 public class CreditCardItem extends LockerItem {
 
-  // set type
+  /** set type of cardNumber01 */
   protected String cardNumber01;
+  /** set type of cardNumber02 */
   protected String cardNumber02;
+  /** set type of cardNumber03 */
   protected String cardNumber03;
+  /** set type of cardNumber04 */
   protected String cardNumber04;
+  /** set type of expireDate */
   protected String expireDate;
+  /** set type of cvv */
   protected String cvv;
+  /** set type of pin */
   protected String pin;
+  /** set type of zipCode */
   protected String zipCode;
+  /** set type of issuerPhone */
   protected String issuerPhone;
+  /** set type of output */
   protected String output;
 
   // Info ArrayList of Credit Card Item
@@ -478,7 +487,7 @@ public class CreditCardItem extends LockerItem {
   /**
    * set third 4 digits of credit card number
    *
-   * @param cardNumber02 - third 4 digits of credit card number
+   * @param cardNumber03 - third 4 digits of credit card number
    */
   public void setCardNumber03(int cardNumber03) {
     this.cardNumber03 = Integer.toString(cardNumber03);

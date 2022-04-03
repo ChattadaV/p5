@@ -19,12 +19,17 @@ import java.time.LocalDate;
  */
 public class DriverLicenseItem extends LockerItem {
 
-  // set type
+  /** set type of address */
   protected String address;
+  /** set type of licenseNumber */
   protected String licenseNumber;
+  /** set type of dob */
   protected String dob;
+  /** set type of issueDate */
   protected String issueDate;
+  /** set type of expireDate */
   protected String expireDate;
+  /** set type of output */
   protected String output;
 
   // ArrayList of Driver License Item/Info

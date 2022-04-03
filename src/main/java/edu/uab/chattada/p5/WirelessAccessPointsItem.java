@@ -19,11 +19,15 @@ import edu.uab.chattada.p5.Fields;
  */
 public class WirelessAccessPointsItem extends LockerItem {
 
-  // set type
+  /** set type of networkType */
   protected String networkType;
+  /** set type of ssid */
   protected String ssid;
+  /** set type of password */
   protected String password;
+  /** set type of hidden */
   protected String hidden;
+  /** set type of output */
   protected String output;
 
   // ArrayList of Wireless Access Points Items/Info

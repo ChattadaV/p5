@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  */
 public final class UrlField extends Fields {
 
-  // set type
+  /** set type of url */
   protected String url;
 
   /**
