@@ -9,12 +9,24 @@ package edu.uab.chattada.p5;
 
 import java.util.regex.Pattern;
 
+/**
+ * Sub class UrlField that can display URL for specific item
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public final class UrlField extends Fields {
 
+  // set type
   protected String url;
 
+  /**
+   * Main method to display URL for specific item
+   *
+   * @param name - type of URL (URL, Main website URL, personal website URL, etc)
+   * @param url - value of URL (link)
+   */
   public UrlField(String name, String url) {
-    super(name, ""); // superclass Fields
+    super(name, ""); // calling name from superclass Fields
     type = "URL Field";
 
     if (isValid() == true) {
@@ -25,9 +37,9 @@ public final class UrlField extends Fields {
   }
 
   /**
-   * Is the object valid
+   * isValid() to check if the URL is valid
    *
-   * @return true if valid otherwise false
+   * @return true if valid. false if invalid.
    */
   public boolean isValid() {
 
@@ -53,7 +65,7 @@ public final class UrlField extends Fields {
   /**
    * Set (or change) the URL, it will affect the validity of the object
    *
-   * @param url new url
+   * @param url - new URL
    */
   public void setUrl(String url) {
     this.url = url;

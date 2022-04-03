@@ -62,34 +62,34 @@
     <property name="java.vendor.version" value="Zulu17.30+15-CA"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetCardNumber" time="0.005"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetCardNumber" time="0.004"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetCvv" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetExpireDate" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetExpireDate" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetIssuerPhone" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetName" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetNotes" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetPin" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testGetZipCode" time="0.001"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber01" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber02" time="0.001"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber03" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber01" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber02" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber03" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCardNumber04" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidCvv" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidExpireDate" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidExpireDate" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidIssuerPhone" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidName" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidName" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidPin" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidZipCode" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testIsValidZipCode" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber01" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber02" time="0.001"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber03" time="0.001"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber04" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber02" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber03" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCardNumber04" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetCvv" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetExpireDate" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetIssuerPhone" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetName" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetName" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetNotes" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetPin" time="0"/>
   <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testSetZipCode" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testToString" time="0.003"/>
+  <testcase classname="edu.uab.chattada.p5.CreditCardItemNGTest" name="testToString" time="0.009"/>
 </testsuite>

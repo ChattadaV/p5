@@ -1,121 +1,373 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="9" passed="9" failed="0" skipped="0">
+<testng-results total="30" passed="30" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-03T19:38:15Z" name="edu.uab.chattada.p5.LockerNGTest" finished-at="2022-04-03T19:38:15Z" duration-ms="39">
+  <suite started-at="2022-04-03T20:16:37Z" name="edu.uab.chattada.p5.CreditCardItemNGTest" finished-at="2022-04-03T20:16:37Z" duration-ms="91">
     <groups>
     </groups>
-    <test started-at="2022-04-03T19:38:15Z" name="Command line test" finished-at="2022-04-03T19:38:15Z" duration-ms="39">
-      <class name="edu.uab.chattada.p5.LockerNGTest">
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="19" status="PASS">
+    <test started-at="2022-04-03T20:16:37Z" name="Command line test" finished-at="2022-04-03T20:16:37Z" duration-ms="91">
+      <class name="edu.uab.chattada.p5.CreditCardItemNGTest">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testAdd()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testAdd" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+        <test-method signature="testGetCardNumber()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetCardNumber" finished-at="2022-04-03T15:16:37Z" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAdd -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- testGetCardNumber -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testDelete()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testDelete" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+        <test-method signature="testGetCvv()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetCvv" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDelete -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- testGetCvv -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method signature="testGetExpireDate()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetExpireDate" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetExpireDate -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="testGet()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testGet" finished-at="2022-04-03T14:38:15Z" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGet -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method signature="testGetIssuerPhone()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetIssuerPhone" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method signature="testSearchContains()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSearchContains" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSearchContains -->
-        <test-method signature="testLock()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testLock" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLock -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- testGetIssuerPhone -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method signature="testGetName()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetName" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName -->
+        <test-method signature="testGetNotes()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetNotes" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetNotes -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testSearchNameContains()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSearchNameContains" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearchNameContains -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testSet()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testSet" finished-at="2022-04-03T14:38:15Z" duration-ms="1" status="PASS">
+        <test-method signature="testGetPin()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetPin" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSet -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method signature="testUnlock()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testUnlock" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUnlock -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- testGetPin -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="tearDownMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method signature="testGetZipCode()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testGetZipCode" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="setUpMethod" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        </test-method> <!-- testGetZipCode -->
+        <test-method signature="testIsValidCardNumber01()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidCardNumber01" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidCardNumber01 -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpMethod -->
-        <test-method signature="testUpdate()[pri:0, instance:edu.uab.chattada.p5.LockerNGTest@fad74ee]" started-at="2022-04-03T14:38:15Z" name="testUpdate" finished-at="2022-04-03T14:38:15Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdate -->
-      </class> <!-- edu.uab.chattada.p5.LockerNGTest -->
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidCardNumber02()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidCardNumber02" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidCardNumber02 -->
+        <test-method signature="testIsValidCardNumber03()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidCardNumber03" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidCardNumber03 -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidCardNumber04()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidCardNumber04" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidCardNumber04 -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testIsValidCvv()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidCvv" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidCvv -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidExpireDate()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidExpireDate" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidExpireDate -->
+        <test-method signature="testIsValidIssuerPhone()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidIssuerPhone" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidIssuerPhone -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidName()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidName" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidName -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidPin()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidPin" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidPin -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testIsValidZipCode()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testIsValidZipCode" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsValidZipCode -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testSetCardNumber01()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetCardNumber01" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCardNumber01 -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testSetCardNumber03()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetCardNumber03" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCardNumber03 -->
+        <test-method signature="testSetCardNumber02()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetCardNumber02" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCardNumber02 -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testSetCardNumber04()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetCardNumber04" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCardNumber04 -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testSetCvv()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetCvv" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCvv -->
+        <test-method signature="testSetExpireDate()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetExpireDate" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetExpireDate -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testSetIssuerPhone()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetIssuerPhone" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetIssuerPhone -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testSetName()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetName" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetName -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="testSetPin()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetPin" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPin -->
+        <test-method signature="testSetNotes()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetNotes" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetNotes -->
+        <test-method signature="testSetZipCode()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testSetZipCode" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetZipCode -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="setUpMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testToString()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="testToString" finished-at="2022-04-03T15:16:37Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testToString -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:edu.uab.chattada.p5.CreditCardItemNGTest@4abdb505]" started-at="2022-04-03T15:16:37Z" name="tearDownMethod" finished-at="2022-04-03T15:16:37Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- edu.uab.chattada.p5.CreditCardItemNGTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- edu.uab.chattada.p5.LockerNGTest -->
+  </suite> <!-- edu.uab.chattada.p5.CreditCardItemNGTest -->
 </testng-results>

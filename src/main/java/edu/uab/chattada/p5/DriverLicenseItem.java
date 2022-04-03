@@ -12,8 +12,14 @@ import java.lang.String;
 import java.lang.CharSequence;
 import java.time.LocalDate;
 
+/**
+ * Sub class Driver DriverLicenseItem that stores driver license information
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class DriverLicenseItem extends LockerItem {
 
+  // set type
   protected String address;
   protected String licenseNumber;
   protected String dob;
@@ -21,8 +27,26 @@ public class DriverLicenseItem extends LockerItem {
   protected String expireDate;
   protected String output;
 
+  // ArrayList of Driver License Item/Info
   ArrayList<Fields> DLI_ArrayList = new ArrayList<>();
 
+  /**
+   * Main method to create driver license item/info in ArrayList
+   *
+   * @param name - name on driver license
+   * @param notes - optional notes about driver license
+   * @param licenseNumber - driver license number
+   * @param address - address on driver license
+   * @param dobYear - year of birth on driver license
+   * @param dobMonth - month of birth on driver license
+   * @param dobDay - day of birth on driver license
+   * @param issueYear - issue year on driver license
+   * @param issueMonth - issue month on driver license
+   * @param issueDay - issue day on driver license
+   * @param expireYear - expiration year on driver license
+   * @param expireMonth - expiration month on driver license
+   * @param expireDay - expiration day on driver license
+   */
   public DriverLicenseItem(
       String name,
       String notes,
@@ -38,15 +62,18 @@ public class DriverLicenseItem extends LockerItem {
       int expireMonth,
       int expireDay) {
 
-    super(name, notes); // superclass LockerItem
+    super(name, notes); // calling name and value from superclass LockerItem
     this.type = "Driver License";
 
     this.address = address;
     this.licenseNumber = Integer.toString(licenseNumber);
+
+    // Using Java Local Date library
     dob = LocalDate.of(dobYear, dobMonth, dobDay).toString();
     issueDate = LocalDate.of(issueYear, issueMonth, issueDay).toString();
     expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
 
+    // ArrayList of Driver License Items/Info
     DLI_ArrayList.add(new NoteField("Notes: ", getNotes()));
     DLI_ArrayList.add(new TextField("License Number: ", getLicenseNumber()));
     DLI_ArrayList.add(new TextField("Name: ", getName()));
@@ -57,6 +84,11 @@ public class DriverLicenseItem extends LockerItem {
     DLI_ArrayList.add(new TextField("UID: ", getUid()));
   }
 
+  /**
+   * toString to get a text block of all driver license items/info
+   *
+   * @return String text representation (text block) of all driver license item/info
+   */
   @Override
   public String toString() {
     output = "";
@@ -68,10 +100,20 @@ public class DriverLicenseItem extends LockerItem {
     return output;
   }
 
+  /**
+   * getNotes to get optional notes of driver license
+   *
+   * @return String optional notes of driver license
+   */
   public String getNotes() {
     return notes;
   }
 
+  /**
+   * getName to get the name on driver license
+   *
+   * @return String name on driver license
+   */
   public String getName() {
     if (isValidName() == false) {
       return null;
@@ -80,6 +122,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * getDriverLicenseNumber to get license number
+   *
+   * @return String driver license number
+   */
   public String getLicenseNumber() {
     if (isValidLicenseNumber() == false) {
       return null;
@@ -88,6 +135,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * getAddress to get address on driver license
+   *
+   * @return String address on driver license
+   */
   public String getAddress() {
     if (isValidAddress() == false) {
       return null;
@@ -96,6 +148,12 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * getDob to get date of birth on driver license using Java Local Date library (specified in main
+   * method)
+   *
+   * @return String date of birth on drive license
+   */
   public String getDob() {
     if (isValidDob() == false) {
       return null;
@@ -104,6 +162,12 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * getIssueDate to get issue date on driver license using Java Local Date library (specified in
+   * main method)
+   *
+   * @return String issue date on driver license
+   */
   public String getIssueDate() {
     if (isValidIssueDate() == false) {
       return null;
@@ -112,6 +176,12 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * getExpireDate to get expiration date on driver license using Java Local Date library (specified
+   * in main method)
+   *
+   * @return String expiration date on drive license
+   */
   public String getExpireDate() {
     if (isValidExpireDate() == false) {
       return null;
@@ -120,6 +190,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidLicenseNumber to check if license number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidLicenseNumber() {
     if ((licenseNumber != null) && (licenseNumber != "")) {
       if (licenseNumber.length() > 0) {
@@ -132,6 +207,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidName to check if name of driver license is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidName() {
     if ((name != null) && (name != "")) {
       if (name.length() > 0) {
@@ -144,6 +224,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidDob to check if date of birth on driver license is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidDob() {
     if ((dob != null) && (dob != "")) {
       if (dob.length() > 0) {
@@ -156,6 +241,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidIssueDate to check if issue date on driver license is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidIssueDate() {
     if ((issueDate != null) && (issueDate != "")) {
       if (issueDate.length() > 0) {
@@ -168,6 +258,11 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidExpireDate to check if expiration date on driver license is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidExpireDate() {
     if ((expireDate != null) && (expireDate != "")) {
       if (expireDate.length() > 0) {
@@ -180,6 +275,12 @@ public class DriverLicenseItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidAddress to check if address is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain correct state
+   *     abbreviation)
+   */
   public boolean isValidAddress() {
     if ((address != null) && (address != "") && (address.length() > 0)) {
       if (address.contains("AL")
@@ -326,30 +427,65 @@ public class DriverLicenseItem extends LockerItem {
   //    }
   //  }
 
+  /**
+   * set notes
+   *
+   * @param notes - optional notes for driver license
+   */
   public void setNotes(String notes) {
     this.notes = notes;
   }
 
+  /**
+   * set license number
+   *
+   * @param licenseNumber - license number on driver license
+   */
   public void setLicenseNumber(int licenseNumber) {
     this.licenseNumber = Integer.toString(licenseNumber);
   }
 
+  /**
+   * set name
+   *
+   * @param name - name on driver license
+   */
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * set address
+   *
+   * @param address - address on driver license
+   */
   public void setAddress(String address) {
     this.address = address;
   }
 
+  /**
+   * set date of birth
+   *
+   * @param dob - date of birth on driver license
+   */
   public void setDob(String dob) {
     this.dob = dob;
   }
 
+  /**
+   * set issue date
+   *
+   * @param issueDate - issue date on driver license
+   */
   public void setIssueDate(String issueDate) {
     this.issueDate = issueDate;
   }
 
+  /**
+   * set expiration date
+   *
+   * @param expireDate - expiration date on driver license
+   */
   public void setExpireDate(String expireDate) {
     this.expireDate = expireDate;
   }

@@ -7,10 +7,21 @@
 
 package edu.uab.chattada.p5;
 
+/**
+ * Sub class TextField that can display variety of text for specific item
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class TextField extends Fields {
 
+  /**
+   * Main method to display text for specific items
+   *
+   * @param name - type of text (String cvv, pin, card number, license number, etc)
+   * @param value - value of notes (String number, text)
+   */
   public TextField(String name, String value) {
-    super(name, value); // superclass Fields
+    super(name, value); // calling name and value from superclass Fields
     type = "Text Field";
 
     // attempting to  mask important information. Is not working as of yet

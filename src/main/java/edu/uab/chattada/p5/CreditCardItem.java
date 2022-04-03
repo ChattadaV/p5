@@ -12,8 +12,15 @@ import java.lang.String;
 import java.lang.CharSequence;
 import java.time.LocalDate;
 
+/**
+ * Subclass CreditCardItem that stores both confidential and non confidential credit card
+ * information
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class CreditCardItem extends LockerItem {
 
+  // set type
   protected String cardNumber01;
   protected String cardNumber02;
   protected String cardNumber03;
@@ -25,8 +32,26 @@ public class CreditCardItem extends LockerItem {
   protected String issuerPhone;
   protected String output;
 
+  // Info ArrayList of Credit Card Item
   ArrayList<Fields> CCI_ArrayList = new ArrayList<>();
 
+  /**
+   * Main method to create credit card info in ArrayList
+   *
+   * @param name - name of credit card's owner
+   * @param notes - optional notes for credit card
+   * @param cardNumber01 - first 4 digit of credit card number (16 total)
+   * @param cardNumber02 - second 4 digit of credit card number (16 total)
+   * @param cardNumber03 - third 4 digit of credit card number (16 total)
+   * @param cardNumber04 - last 4 digit of credit card number (16 total)
+   * @param expireYear - card expiration year
+   * @param expireMonth - card expiration month
+   * @param expireDay - card expiration day
+   * @param cvv - security code on the back of credit card
+   * @param pin - pin to access credit card
+   * @param zipCode - zip code of credit card's owner's residence
+   * @param issuerPhone - credit card's company phone number
+   */
   public CreditCardItem(
       String name,
       String notes,
@@ -42,10 +67,10 @@ public class CreditCardItem extends LockerItem {
       int zipCode,
       int issuerPhone) {
 
-    super(name, notes); // superclass LockerItem
-    this.type = "Credit Card";
+    super(name, notes); // callling name and notes from superclass LockerItem
 
-    expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
+    // Using Java LocalDate library to obtain card expiration date
+    this.expireDate = LocalDate.of(expireYear, expireMonth, expireDay).toString();
 
     this.cardNumber01 = Integer.toString(cardNumber01);
     this.cardNumber02 = Integer.toString(cardNumber02);
@@ -55,7 +80,9 @@ public class CreditCardItem extends LockerItem {
     this.pin = Integer.toString(pin);
     this.zipCode = Integer.toString(zipCode);
     this.issuerPhone = Integer.toString(issuerPhone);
+    this.type = "Credit Card";
 
+    // ArrayList of Credit Card Item/Info
     CCI_ArrayList.add(new NoteField("Notes: ", getNotes()));
     CCI_ArrayList.add(new TextField("Name: ", getName()));
     CCI_ArrayList.add(new TextField("Card Number: ", getCardNumber()));
@@ -67,6 +94,11 @@ public class CreditCardItem extends LockerItem {
     CCI_ArrayList.add(new TextField("UID: ", getUid()));
   }
 
+  /**
+   * toString to get a text block of all credit card item/info
+   *
+   * @return String text representation (text block) of all credit card item/info
+   */
   @Override
   public String toString() {
     output = "";
@@ -78,10 +110,20 @@ public class CreditCardItem extends LockerItem {
     return output;
   }
 
+  /**
+   * getNotes to get optional notes of credit card
+   *
+   * @return String optional notes of credit card
+   */
   public String getNotes() {
     return notes;
   }
 
+  /**
+   * getName to get the name of credit card's owner
+   *
+   * @return String name of credit card's owner
+   */
   public String getName() {
     if (isValidName() == false) {
       return null;
@@ -90,6 +132,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getCardNumber to get all 16 digits of credit card number
+   *
+   * @return String 16-digit credit card number
+   */
   public String getCardNumber() {
     if ((isValidCardNumber01()
             && isValidCardNumber02()
@@ -102,6 +149,12 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getExpireDate to get expiration date of credit card using Java Local Date library (specified in
+   * main method)
+   *
+   * @return String expiration date of credit card
+   */
   public String getExpireDate() {
     if (isValidExpireDate() == false) {
       return null;
@@ -110,6 +163,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getCvv to get security code (cvv) on the back of credit card
+   *
+   * @return String 3-digit security code (cvv) on the back of credit card
+   */
   public String getCvv() {
     if (isValidCvv() == false) {
       return null;
@@ -118,6 +176,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getPin to get pin to access/use credit card
+   *
+   * @return String pin to access/use credit card
+   */
   public String getPin() {
     if (isValidPin() == false) {
       return null;
@@ -126,6 +189,12 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getZipCode to get the zip code of credit card's owner's residence (required in some cases to
+   * access/use credit card)
+   *
+   * @return String 5-digit zip code of credit card's owner's residence
+   */
   public String getZipCode() {
     if (isValidZipCode() == false) {
       return null;
@@ -134,6 +203,12 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * getIssuerPhone to get credit card's company phone number (used to activate, deactivate, or ask
+   * customer representatives some questions)
+   *
+   * @return String 10-digit credit card's company phone number
+   */
   public String getIssuerPhone() {
     if (isValidIssuerPhone() == false) {
       return null;
@@ -142,6 +217,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidName to check if the credit card's owner's name is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidName() {
     if ((name != null) && (name != "")) {
       if (name.length() > 0) {
@@ -154,6 +234,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidCardNumber01 to check if the first 4 digits of credit card number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 4-digit number)
+   */
   public boolean isValidCardNumber01() {
     if ((cardNumber01 != null) && (cardNumber01 != "")) {
       if (cardNumber01.length() == 4) {
@@ -166,6 +251,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidCardNumber02 to check if the second 4 digits of credit card number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 4-digit number)
+   */
   public boolean isValidCardNumber02() {
     if ((cardNumber02 != null) && (cardNumber02 != "")) {
       if (cardNumber02.length() == 4) {
@@ -178,6 +268,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidCardNumber03 to check if the third 4 digits of credit card number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 4-digit number)
+   */
   public boolean isValidCardNumber03() {
     if ((cardNumber03 != null) && (cardNumber03 != "")) {
       if (cardNumber03.length() == 4) {
@@ -190,6 +285,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidCardNumber04 to check if the last 4 digits of credit card number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 4-digit number)
+   */
   public boolean isValidCardNumber04() {
     if ((cardNumber04 != null) && (cardNumber04 != "")) {
       if (cardNumber04.length() == 4) {
@@ -202,6 +302,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidExpireDate to check if the expiration date of credit card is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidExpireDate() {
     if ((expireDate != null) && (expireDate != "")) {
       if (expireDate.length() > 0) {
@@ -214,6 +319,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidCvv to check if the security code (cvv)on the back of credit card is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 3-digit number)
+   */
   public boolean isValidCvv() {
     if ((cvv != null) && (cvv != "")) {
       if (cvv.length() == 3) {
@@ -226,6 +336,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidPin to check if the pin to access/use credit card is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "")
+   */
   public boolean isValidPin() {
     if ((pin != null) && (pin != "")) {
       if (pin.length() > 0) {
@@ -238,6 +353,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidZipCode to check if the zip code of credit card's owner's residence is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 5-digit number)
+   */
   public boolean isValidZipCode() {
     if ((zipCode != null) && (zipCode != "")) {
       if (zipCode.length() == 5) {
@@ -250,6 +370,11 @@ public class CreditCardItem extends LockerItem {
     }
   }
 
+  /**
+   * isValidIssuerPhone to check if the credit card's company phone number is valid
+   *
+   * @return true if valid. false if invalid (i.e. null or "" or does not contain 10-digit number)
+   */
   public boolean isValidIssuerPhone() {
     if ((issuerPhone != null) && (issuerPhone != "")) {
       if (issuerPhone.length() == 10) {
@@ -314,46 +439,101 @@ public class CreditCardItem extends LockerItem {
   //    }
   //  }
 
+  /**
+   * set notes
+   *
+   * @param notes - optional notes for credit card
+   */
   public void setNotes(String notes) {
     this.notes = notes;
   }
 
+  /**
+   * set name
+   *
+   * @param name - name of credit card's owner
+   */
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * set first 4 digits of credit card number
+   *
+   * @param cardNumber01 - first 4 digits of credit card number
+   */
   public void setCardNumber01(int cardNumber01) {
     this.cardNumber01 = Integer.toString(cardNumber01);
   }
 
+  /**
+   * set second 4 digits of credit card number
+   *
+   * @param cardNumber02 - second 4 digits of credit card number
+   */
   public void setCardNumber02(int cardNumber02) {
     this.cardNumber03 = Integer.toString(cardNumber02);
   }
 
+  /**
+   * set third 4 digits of credit card number
+   *
+   * @param cardNumber02 - third 4 digits of credit card number
+   */
   public void setCardNumber03(int cardNumber03) {
     this.cardNumber03 = Integer.toString(cardNumber03);
   }
 
+  /**
+   * set last 4 digits of credit card number
+   *
+   * @param cardNumber04 - last 4 digits of credit card number
+   */
   public void setCardNumber04(int cardNumber04) {
     this.cardNumber04 = Integer.toString(cardNumber04);
   }
 
+  /**
+   * set expiration date of credit card
+   *
+   * @param expireDate - expiration date of credit card
+   */
   public void setExpireDate(String expireDate) {
     this.expireDate = expireDate;
   }
 
+  /**
+   * set security code (cvv) on the back of credit card
+   *
+   * @param cvv - security code (cvv) on the back of credit card
+   */
   public void setCvv(int cvv) {
     this.cvv = Integer.toString(cvv);
   }
 
+  /**
+   * set pin to access/use credit card
+   *
+   * @param pin - pin to access/user credit card
+   */
   public void setPin(int pin) {
     this.pin = Integer.toString(pin);
   }
 
+  /**
+   * set zip code of credit card's owner's residence
+   *
+   * @param zipCode - zip code of credit card's owner's residence
+   */
   public void setZipCode(int zipCode) {
     this.zipCode = Integer.toString(zipCode);
   }
 
+  /**
+   * set phone number of credit card's company
+   *
+   * @param issuerPhone - phone number of credit card's company
+   */
   public void setIssuerPhone(int issuerPhone) {
     this.issuerPhone = Integer.toString(issuerPhone);
   }

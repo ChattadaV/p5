@@ -7,10 +7,21 @@
 
 package edu.uab.chattada.p5;
 
+/**
+ * Sub class PasswordField that can display password for specific item
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class PasswordField extends Fields {
 
+  /**
+   * Main method to display password for specific items
+   *
+   * @param name - type of password (String password, outer password, inner password, etc)
+   * @param value - value of notes (String password)
+   */
   public PasswordField(String name, String value) {
-    super(name, value);
+    super(name, value); // calling name and value from super class Fields
     type = "Password Field";
 
     // attempting to mask confidential info. Is not wokring as of yet
