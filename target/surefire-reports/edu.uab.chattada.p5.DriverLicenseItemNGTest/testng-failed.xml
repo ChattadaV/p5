@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [edu.uab.chattada.p5.DriverLicenseItemNGTest]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="edu.uab.chattada.p5.DriverLicenseItemNGTest">
+        <methods>
+          <include name="testSetDob"/>
+          <include name="testGetAddress"/>
+          <include name="testGetLicenseNumber"/>
+          <include name="testIsValidExpireDate"/>
+          <include name="testIsValidDob"/>
+          <include name="testSetIssueDate"/>
+          <include name="testGetNotes"/>
+          <include name="testIsValidAddress"/>
+          <include name="testSetAddress"/>
+          <include name="testSetLicenseNumber"/>
+          <include name="testSetExpireDate"/>
+          <include name="testGetDob"/>
+          <include name="testGetIssueDate"/>
+          <include name="testSetName"/>
+          <include name="setUpMethod"/>
+          <include name="testIsValidIssueDate"/>
+          <include name="testGetExpireDate"/>
+          <include name="testIsValidLicenseNumber"/>
+          <include name="testSetNotes"/>
+          <include name="testToString"/>
+          <include name="testIsValidName"/>
+          <include name="testGetName"/>
+        </methods>
+      </class> <!-- edu.uab.chattada.p5.DriverLicenseItemNGTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.DriverLicenseItemNGTest] -->

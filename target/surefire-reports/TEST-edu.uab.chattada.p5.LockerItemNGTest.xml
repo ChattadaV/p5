@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="25" failures="0" name="edu.uab.chattada.p5.LockerItemNGTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="25" failures="0" name="edu.uab.chattada.p5.LockerItemNGTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS"/>
@@ -62,28 +62,28 @@
     <property name="java.vendor.version" value="Zulu17.30+15-CA"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testContain" time="0.005"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testContain" time="0.004"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testDelete" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGet" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGet" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDateCreated" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDateLastChanged" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetDatesChanged" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetFields" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetFields" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetName" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetNotes" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetType" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetUid" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testMatch" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testGetUid" time="0.001"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testMatch" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testMatchName" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSet" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSet" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetContain" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDateCreated" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDateCreated" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDateLastChanged" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetDatesChanged" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetFields" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetMatch" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetMatchName" time="0"/>
-  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetName" time="0"/>
+  <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetName" time="0.001"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetNotes" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetType" time="0"/>
   <testcase classname="edu.uab.chattada.p5.LockerItemNGTest" name="testSetUid" time="0"/>

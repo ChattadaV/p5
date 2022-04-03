@@ -28,6 +28,13 @@ public class LockerItemNGTest {
 
   @BeforeMethod
   public void setUpMethod() throws Exception {
+    System.out.println("Name: Chattada Viriyaphap (Pi)");
+    System.out.println("BlazerID: chattada");
+    System.out.println("\n");
+
+    System.out.println("Test: LockerItem");
+    System.out.println("\n");
+
     successful_01 =
         new DriverLicenseItem(
             "John Doe",
@@ -43,7 +50,7 @@ public class LockerItemNGTest {
             2023,
             3,
             3);
-    System.out.println(successful_01);
+    //    System.out.println(successful_01);
 
     successful_02 =
         new WirelessAccessPointsItem(
@@ -111,12 +118,12 @@ public class LockerItemNGTest {
             1111111111);
     //    System.out.println(error_03);
 
-    testArrayList.add(successful_01);
-    testArrayList.add(successful_02);
-    testArrayList.add(successful_03);
-    testArrayList.add(error_01);
-    testArrayList.add(error_02);
-    testArrayList.add(error_03);
+    //    testArrayList.add(successful_01);
+    //    testArrayList.add(successful_02);
+    //    testArrayList.add(successful_03);
+    //    testArrayList.add(error_01);
+    //    testArrayList.add(error_02);
+    //    testArrayList.add(error_03);
   }
 
   @AfterMethod

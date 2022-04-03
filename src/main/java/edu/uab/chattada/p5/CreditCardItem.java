@@ -132,13 +132,13 @@ public class CreditCardItem extends LockerItem {
 
   public String getCardNumber() {
     if ((isValidCardNumber01()
-            || isValidCardNumber02()
-            || isValidCardNumber03()
-            || isValidCardNumber04())
-        == false) {
-      return null;
-    } else {
+            && isValidCardNumber02()
+            && isValidCardNumber03()
+            && isValidCardNumber04())
+        == true) {
       return cardNumber01 + " " + cardNumber02 + " " + cardNumber03 + " " + cardNumber04;
+    } else {
+      return null;
     }
   }
 
@@ -183,80 +183,120 @@ public class CreditCardItem extends LockerItem {
   }
 
   public boolean isValidName() {
-    if ((name != null) && (name != "") && (name.length() > 0)) {
-      return true;
+    if ((name != null) && (name != "")) {
+      if (name.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidCardNumber01() {
-    if ((cardNumber01 != null) && (cardNumber01 != "") && (cardNumber01.length() == 4)) {
-      return true;
+    if ((cardNumber01 != null) && (cardNumber01 != "")) {
+      if (cardNumber01.length() == 4) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidCardNumber02() {
-    if ((cardNumber02 != null) && (cardNumber02 != "") && (cardNumber02.length() == 4)) {
-      return true;
+    if ((cardNumber02 != null) && (cardNumber02 != "")) {
+      if (cardNumber02.length() == 4) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidCardNumber03() {
-    if ((cardNumber03 != null) && (cardNumber03 != "") && (cardNumber03.length() == 4)) {
-      return true;
+    if ((cardNumber03 != null) && (cardNumber03 != "")) {
+      if (cardNumber03.length() == 4) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidCardNumber04() {
-    if ((cardNumber04 != null) && (cardNumber04 != "") && (cardNumber04.length() == 4)) {
-      return true;
+    if ((cardNumber04 != null) && (cardNumber04 != "")) {
+      if (cardNumber04.length() == 4) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidExpireDate() {
-    if ((expireDate != null) && (expireDate != "") && (expireDate.length() > 0)) {
-      return true;
+    if ((expireDate != null) && (expireDate != "")) {
+      if (expireDate.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidCvv() {
-    if ((cvv != null) && (cvv != "") && (cvv.length() == 3)) {
-      return true;
+    if ((cvv != null) && (cvv != "")) {
+      if (cvv.length() == 3) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidPin() {
-    if ((pin != null) && (pin != "") && (pin.length() == 3)) {
-      return true;
+    if ((pin != null) && (pin != "")) {
+      if (pin.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidZipCode() {
-    if ((zipCode != null) && (zipCode != "") && (zipCode.length() == 5)) {
-      return true;
+    if ((zipCode != null) && (zipCode != "")) {
+      if (zipCode.length() == 5) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidIssuerPhone() {
-    if ((issuerPhone != null) && (issuerPhone != "") && (issuerPhone.length() == 10)) {
-      return true;
+    if ((issuerPhone != null) && (issuerPhone != "")) {
+      if (issuerPhone.length() == 10) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }

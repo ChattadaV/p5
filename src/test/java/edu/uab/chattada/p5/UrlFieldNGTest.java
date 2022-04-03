@@ -21,11 +21,18 @@ public class UrlFieldNGTest {
 
   @BeforeMethod
   public void setUpMethod() throws Exception {
+    System.out.println("Name: Chattada Viriyaphap (Pi)");
+    System.out.println("BlazerID: chattada");
+    System.out.println("\n");
+
+    System.out.println("Test: UrlField");
+    System.out.println("\n");
+
     successful = new UrlField("UAB Main Website", "https://www.uab.edu");
-    //    System.out.println(successful);
+    //            System.out.println(successful);
 
     error = new UrlField("Error Website", "ww.abc x.yz");
-    //    System.out.println(error);
+    //        System.out.println(error);
   }
 
   @AfterMethod

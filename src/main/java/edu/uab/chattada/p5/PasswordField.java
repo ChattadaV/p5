@@ -14,10 +14,10 @@ public class PasswordField extends Fields {
     type = "Password Field";
 
     // attempting to mask confidential info. Is not wokring as of yet
-    if (name.equalsIgnoreCase("Password: ")) {
-      for (int index = 0; index < value.length(); index++) {
-        this.text += "*";
-      }
-    }
+    //    if (name.equalsIgnoreCase("Password: ")) {
+    //      for (int index = 0; index < value.length(); index++) {
+    //        this.text += "*";
+    //      }
+    //    }
   }
 }

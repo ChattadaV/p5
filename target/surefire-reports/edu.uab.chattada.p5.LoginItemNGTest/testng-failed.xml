@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [edu.uab.chattada.p5.LoginItemNGTest]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="edu.uab.chattada.p5.LoginItemNGTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="testSetType"/>
+        </methods>
+      </class> <!-- edu.uab.chattada.p5.LoginItemNGTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [edu.uab.chattada.p5.LoginItemNGTest] -->

@@ -16,32 +16,7 @@ public final class DateField extends Fields {
   //  protected int day;
   protected String date;
 
-  //  public DateField(String name, String value, int year, int month, int day) {
-  //    super(name, value);
-  //
-  //    //    this.year = year;
-  //    //    this.month = month;
-  //    //    this.day = day;
-  //
-  //    getDate(year, month, day);
-  //  }
-  //
-  //  public String getDate(int year, int month, int day) {
-  //    String date = LocalDate.of(year, month, day).toString();
-  //    return date;
-  //  }
-
   public DateField(String name, String value) {
     super(name, value); // superclass Fields
-    //    this.year = year;
-    //    this.month = month;
-    //    this.day = day;
-    //
-    //    getDate(year, month, day);
   }
-
-  //  public String getDate(int year, int month, int day) {
-  //    String date = LocalDate.of(year, month, day).toString();
-  //    return date;
-  //  }
 }

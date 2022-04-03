@@ -2,7 +2,7 @@
  * Author: Chattada Viriyaphap <chattada@uab.edu>
  * Assignment:  p5 - EE333 Spring 2022
  *
- * Credits:  (if any for sections of code)
+ * Credits:  isValidUrl() - Regular Expression Test is from https://www.geeksforgeeks.org/check-if-an-url-is-valid-or-not-using-regular-expression/
  */
 
 package edu.uab.chattada.p5;
@@ -15,13 +15,12 @@ public class UrlField extends Fields {
 
   public UrlField(String name, String url) {
     super(name, ""); // superclass Fields
-    this.url = url;
     type = "URL Field";
 
     if (isValid() == false) {
-      System.out.println("Invalid Url");
+      this.url = url;
     } else {
-      toString();
+      this.url = null;
     }
   }
 

@@ -2,7 +2,7 @@
  * Author: Chattada Viriyaphap <chattada@uab.edu>
  * Assignment:  p5 - EE333 Spring 2022
  *
- * Credits:  (if any for sections of code)
+ * Credits:  isValidUrl() - Regular Expression Test is from https://www.geeksforgeeks.org/check-if-an-url-is-valid-or-not-using-regular-expression/
  */
 
 package edu.uab.chattada.p5;
@@ -10,6 +10,7 @@ package edu.uab.chattada.p5;
 import java.util.ArrayList;
 import java.lang.String;
 import edu.uab.chattada.p5.Fields;
+import java.util.regex.Pattern;
 
 public class LoginItem extends LockerItem {
 
@@ -41,19 +42,100 @@ public class LoginItem extends LockerItem {
   }
 
   public String getName() {
-    return name;
+    if (isValidName() == false) {
+      return null;
+    } else {
+      return name;
+    }
   }
 
   public String getUsername() {
-    return username;
+    if (isValidUsername() == false) {
+      return null;
+    } else {
+      return username;
+    }
   }
 
   public String getPassword() {
-    return password;
+    if (isValidPassword() == false) {
+      return null;
+    } else {
+      return password;
+    }
   }
 
   public String getUrl() {
-    return url;
+    if (isValidUrl() == false) {
+      return null;
+    } else {
+      return url;
+    }
+  }
+
+  public boolean isValidName() {
+    if ((name != null) || (name != "")) {
+      if ((name.length() > 0)) {
+        return true;
+      } else {
+        return false;
+      }
+
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidUsername() {
+    if ((username != null) || (username != "")) {
+      if ((username.length() > 0)) {
+        return true;
+      } else {
+        return false;
+      }
+
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isValidPassword() {
+    if ((password != null) || (password != "")) {
+      if ((password.length() > 0)) {
+        return true;
+      } else {
+        return false;
+      }
+
+    } else {
+      return false;
+    }
+  }
+
+  /**
+   * Is the object valid
+   *
+   * @return true if valid otherwise false
+   */
+  public boolean isValidUrl() {
+
+    // regular expression test does not like to be fed a null url
+    if (url == null) {
+      return false;
+    }
+
+    /*
+     * Regular Expression Test is from https://www.geeksforgeeks.org/check-if-an-url-is-valid-or-not-using-regular-expression/
+     */
+    var p =
+        Pattern.compile(
+            "((http|https)://)(www.)?"
+                + "[a-zA-Z0-9@:%._\\+~#?&//=]"
+                + "{2,256}\\.[a-z]"
+                + "{2,6}\\b([-a-zA-Z0-9@:%"
+                + "._\\+~#?&//=]*)");
+    var m = p.matcher(url);
+    return m.matches();
   }
 
   @Override

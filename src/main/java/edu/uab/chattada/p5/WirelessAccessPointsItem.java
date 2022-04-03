@@ -123,8 +123,12 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public boolean isValidName() {
-    if ((name != null) && (name != "") && (name.length() > 0)) {
-      return true;
+    if ((name != null) && (name != "")) {
+      if (name.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
@@ -165,8 +169,12 @@ public class WirelessAccessPointsItem extends LockerItem {
   }
 
   public boolean isValidSsid() {
-    if ((ssid != null) && (ssid != "") && (ssid.length() > 0)) {
-      return true;
+    if ((ssid != null) && (ssid != "")) {
+      if (ssid.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }

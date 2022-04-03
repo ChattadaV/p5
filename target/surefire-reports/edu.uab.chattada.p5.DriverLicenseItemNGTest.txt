@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: edu.uab.chattada.p5.DriverLicenseItemNGTest
+-------------------------------------------------------------------------------
+Tests run: 63, Failures: 1, Errors: 0, Skipped: 62, Time elapsed: 0.471 sec <<< FAILURE!
+setUpMethod(edu.uab.chattada.p5.DriverLicenseItemNGTest)  Time elapsed: 0.282 sec  <<< FAILURE!
+java.lang.RuntimeException: Uncompilable code - missing return statement
+	at edu.uab.chattada.p5.DriverLicenseItem.isValidLicenseNumber(DriverLicenseItem.java:1)
+	at edu.uab.chattada.p5.DriverLicenseItem.getLicenseNumber(DriverLicenseItem.java:142)
+	at edu.uab.chattada.p5.DriverLicenseItem.<init>(DriverLicenseItem.java:71)
+	at edu.uab.chattada.p5.DriverLicenseItemNGTest.setUpMethod(DriverLicenseItemNGTest.java:24)
+

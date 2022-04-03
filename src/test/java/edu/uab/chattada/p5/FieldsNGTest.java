@@ -21,6 +21,13 @@ public class FieldsNGTest {
 
   @BeforeMethod
   public void setUpMethod() throws Exception {
+    System.out.println("Name: Chattada Viriyaphap (Pi)");
+    System.out.println("BlazerID: chattada");
+    System.out.println("\n");
+
+    System.out.println("Test: Fields");
+    System.out.println("\n");
+
     successful = new Fields("Successful Example: ", "Correct Text");
     //    System.out.println(successful);
 

@@ -179,40 +179,60 @@ public class DriverLicenseItem extends LockerItem {
   }
 
   public boolean isValidLicenseNumber() {
-    if ((licenseNumber != null) && (licenseNumber != "") && (licenseNumber.length() > 0)) {
-      return true;
+    if ((licenseNumber != null) && (licenseNumber != "")) {
+      if (licenseNumber.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidName() {
-    if ((name != null) && (name != "") && (name.length() > 0)) {
-      return true;
+    if ((name != null) && (name != "")) {
+      if (name.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidDob() {
-    if ((dob != null) && (dob != "") && (dob.length() > 0)) {
-      return true;
+    if ((dob != null) && (dob != "")) {
+      if (dob.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidIssueDate() {
-    if ((issueDate != null) && (issueDate != "") && (issueDate.length() > 0)) {
-      return true;
+    if ((issueDate != null) && (issueDate != "")) {
+      if (issueDate.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   public boolean isValidExpireDate() {
-    if ((expireDate != null) && (expireDate != "") && (expireDate.length() > 0)) {
-      return true;
+    if ((expireDate != null) && (expireDate != "")) {
+      if (expireDate.length() > 0) {
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
