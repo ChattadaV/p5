@@ -12,20 +12,37 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for superclass LockerItem
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class LockerItemNGTest {
 
+  /** set type of successful_01 */
   private LockerItem successful_01;
+  /** set type of successful_02 */
   private LockerItem successful_02;
+  /** set type of successful_03 */
   private LockerItem successful_03;
+  /** set type of error_01 */
   private LockerItem error_01;
+  /** set type of error_02 */
   private LockerItem error_02;
+  /** set type of error_03 */
   private LockerItem error_03;
 
+  // ArrayList of locker item test items
   ArrayList<LockerItem> testArrayList = new ArrayList<>();
 
+  /** Main method to create locker items */
   public LockerItemNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -126,6 +143,11 @@ public class LockerItemNGTest {
     //    testArrayList.add(error_03);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 
@@ -957,8 +979,9 @@ public class LockerItemNGTest {
     instance_6.setType(type_6);
   }
 
+  /** Test of subclass LockerItemIml of super class LockerItem */
   public class LockerItemImpl extends LockerItem {
-
+    /** Main method of LockerItemImpl */
     public LockerItemImpl() {
       super("", "");
     }

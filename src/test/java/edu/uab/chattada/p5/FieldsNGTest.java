@@ -11,14 +11,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for superclass Fields
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class FieldsNGTest {
 
+  /** set type of successful */
   private Fields successful;
+  /** set type of error */
   private Fields error;
 
+  /** Main method to create Fields items */
   public FieldsNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -35,6 +47,11 @@ public class FieldsNGTest {
     //    System.out.println(error);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 

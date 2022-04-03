@@ -12,14 +12,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for superclass Locker
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class LockerNGTest {
 
+  /** set type of lockerSystem */
   private Locker lockerSystem;
+  /** set type of driverLicense */
   private LockerItem driverLicense;
 
+  /** Main method to create Locker system items */
   public LockerNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -48,6 +60,11 @@ public class LockerNGTest {
             3);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 

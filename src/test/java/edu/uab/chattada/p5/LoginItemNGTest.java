@@ -11,14 +11,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for subclass LoginItem of super class LockerItem Fields
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class LoginItemNGTest {
 
+  /** set type of successful */
   private LoginItem successful;
+  /** set type of error */
   private LoginItem error;
 
+  /** Main method to create login items */
   public LoginItemNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -43,6 +55,11 @@ public class LoginItemNGTest {
     System.out.println(error);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 

@@ -11,14 +11,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for subclass CreditCardItem of superclass LockerItem
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class CreditCardItemNGTest {
 
+  /** set type of successful */
   private CreditCardItem successful;
+  /** set type of error */
   private CreditCardItem error;
 
+  /** Main method to create credit card item */
   public CreditCardItemNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -63,6 +75,11 @@ public class CreditCardItemNGTest {
     //    System.out.println(error);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 

@@ -11,14 +11,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** */
+/**
+ * NG Unit Test for subclass UrlField of superclass Fields
+ *
+ * @author Chattada Viriyaphap <chattada@uab.edu>
+ */
 public class UrlFieldNGTest {
 
+  /** set type of successful */
   private UrlField successful;
+  /** set type of error */
   private UrlField error;
 
+  /** Main method to create UrlField items */
   public UrlFieldNGTest() {}
 
+  /**
+   * set up initial variables before executing
+   *
+   * @throws Exception
+   */
   @BeforeMethod
   public void setUpMethod() throws Exception {
     System.out.println("Name: Chattada Viriyaphap (Pi)");
@@ -35,6 +47,11 @@ public class UrlFieldNGTest {
     //        System.out.println(error);
   }
 
+  /**
+   * tear down initial variables after executing (none)
+   *
+   * @throws Exception
+   */
   @AfterMethod
   public void tearDownMethod() throws Exception {}
 
